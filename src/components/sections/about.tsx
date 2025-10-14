@@ -170,7 +170,7 @@ export function AboutSection() {
             At my core, I&apos;m someone who believes in learning by doing, collaborating with purpose, and finding inspiration in every experience.
           </>,
           <>
-            Because for me, it&apos;s never just about building things. It&apos;s about <strong className="font-semibold">building experiences that connect, inspire, and make a difference</strong>.
+            Because for me, <strong className="font-semibold">it&apos;s never just about building things. It&apos;s about building experiences that connect, inspire, and make a difference</strong>.
           </>,
         ],
       },
@@ -192,8 +192,6 @@ export function AboutSection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <div className="absolute -left-6 -top-8 h-32 w-32 rounded-full bg-secondary/30 blur-2xl" />
-          <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-[2.5rem] border border-white/50 bg-white/40 backdrop-blur" />
           <div
             ref={containerRef}
             className="relative h-[360px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[420px] lg:h-full"

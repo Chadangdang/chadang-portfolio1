@@ -17,8 +17,9 @@ export function SkillsSection() {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Skills"
-          title="Craft, code, and culture"
-          subtitle="A balance of technical depth and soft skills that help projects stay focused, inclusive, and future-ready."
+          title="craft, connect and create"
+          subtitle="combine technical craft with people skills to bring ideas to life"
+          titleClassName="text-[#756764]"
         />
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <motion.div
@@ -28,7 +29,7 @@ export function SkillsSection() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-secondary-foreground">
+            <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
               Technical Stack
             </h3>
             <div className="mt-8 grid gap-8">
@@ -42,7 +43,7 @@ export function SkillsSection() {
                       <Badge
                         key={skill}
                         variant="outline"
-                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-secondary-foreground"
+                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#756764]"
                       >
                         {skill}
                       </Badge>
@@ -80,13 +81,13 @@ export function SkillsSection() {
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
             <div className="rounded-[2.25rem] border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
-              <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-secondary-foreground">
+              <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
                 Soft Skills
               </h3>
               <div className="mt-6 grid gap-4 text-sm leading-6 text-muted-foreground/90 font-open-sans">
                 {softSkills.map((skill) => (
                   <p key={skill.title} className="rounded-2xl border border-white/60 bg-white/70 p-4">
-                    <span className="block font-semibold uppercase tracking-[0.32em] text-secondary-foreground/80">
+                    <span className="block font-semibold uppercase tracking-[0.32em] text-[#80786B]">
                       {skill.title}
                     </span>
                     <span className="mt-1 block text-xs tracking-wide text-muted-foreground/80">
@@ -97,7 +98,7 @@ export function SkillsSection() {
               </div>
             </div>
             <div className="rounded-[2.25rem] border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
-              <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-secondary-foreground">
+              <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
                 Languages
               </h3>
               <div className="mt-6 space-y-4 font-open-sans text-sm text-muted-foreground/90">

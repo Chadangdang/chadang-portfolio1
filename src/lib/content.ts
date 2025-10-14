@@ -52,77 +52,92 @@ export const softSkills: Highlight[] = [
   {
     title: "Collaboration",
     description:
-      "Thrives in multi-disciplinary squads with rituals that keep feedback loops active and respectful.",
-  },
+        "Works best in fast-moving, cross-functional teams, always open to feedback, brainstorming, and building momentum together.",  },
   {
     title: "Leadership",
     description:
-      "Guides sprints, scopes MVPs, and supports teammates with actionable mentoring and documentation.",
+      "Drives projects forward with clear direction and energy, keeps goals realistic, teammates motivated, and results delivered.",
   },
   {
     title: "Communication",
     description:
-      "Bridges product, design, and engineering with concise updates and demo-driven checkpoints.",
+      "Keeps everyone aligned with transparent updates, quick syncs, and demo-driven progress that speaks for itself.",
   },
   {
     title: "Responsibility",
     description:
-      "Owns delivery from discovery to launch, balancing business objectives with user experience.",
+      "Takes ownership from kickoff to launch, balancing speed, quality, and impact to get things shipped right.",
   },
   {
     title: "Adaptability",
     description:
-      "Comfortable iterating with evolving requirements and shipping value in fast-paced environments.",
+      "Thrives in change, adjusts fast, learns faster, and turns shifting requirements into creative opportunities.",
   },
   {
     title: "Problem Solving",
     description:
-      "Translates complex constraints into pragmatic technical plans with measurable success criteria.",
+      "Turns complexity into clarity, breaking big challenges into smart, executable steps that move projects forward.",
   },
 ];
 
 export const languages: Highlight[] = [
   {
     title: "Thai",
-    description: "Native speaker with cultural fluency and localisation experience.",
+    description:
+      "Native speaker with strong cultural fluency and experience adapting content for local audiences.",
   },
   {
     title: "English",
-    description: "Professional working proficiency across documentation and stakeholder communication.",
+    description:
+      "Professional working proficiency (TOEIC 750), fluent in collaboration, documentation, and stakeholder communication.",
   },
   {
-    title: "Spanish",
-    description: "Conversational B1/B2 level focused on collaboration and travel contexts.",
+    title: "Mandarin",
+    description:
+      "Beginner level, currently studying and building everyday vocabulary for cross-cultural connection.",
   },
 ];
 
 export const programmingSkills: SkillGroup[] = [
   {
     category: "Programming Languages",
-    skills: ["TypeScript", "JavaScript", "Python", "PHP"],
+    skills: [
+        "Python",
+        "JavaScript",
+        "TypeScript",
+        "PHP",
+        "HTML",
+        "CSS",
+        "JSON",
+        "SQL",
+      ],
   },
   {
     category: "Frameworks & Libraries",
-    skills: ["Next.js", "React", "Node.js", "FastAPI", "Expo"],
+    skills: [
+        "React",
+        "React Native",
+        "Node.js",
+        "Next.js",
+        "FastAPI",
+        "Phaser",
+        "Pygame",
+      ],
   },
   {
     category: "Design & Collaboration",
-    skills: ["Figma", "Framer Motion", "shadcn/ui"],
+    skills: ["Figma", "shadcn/ui", "Microsoft Office Suite"],
   },
 ];
 
 export const tooling: SkillGroup[] = [
   {
     category: "Platforms & Databases",
-    skills: ["MySQL", "MongoDB", "Firebase"],
+    skills: ["MySQL", "Firebase", "RESTful APIs"],
   },
   {
     category: "Dev Tooling",
-    skills: ["Git", "VS Code", "Vercel"],
-  },
-  {
-    category: "PWA & Automation",
-    skills: ["Workbox", "next-sitemap", "next-seo"],
+    skills: ["Git", "GitHub", "VS Code", "Vercel"],
   },
 ];
 
