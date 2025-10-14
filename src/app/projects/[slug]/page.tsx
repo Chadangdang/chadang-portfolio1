@@ -17,7 +17,8 @@ type ProjectPageProps = {
 };
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const project = projects.find((entry) => entry.slug === params.slug);
+  const { slug } = await Promise.resolve(params);
+  const project = projects.find((entry) => entry.slug === slug);
 
   if (!project) {
     return {
@@ -26,10 +27,10 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   }
 
   return {
-    title: `${project.title} — Case Study`,
+    title: project.title,
     description: project.summary,
     openGraph: {
-      title: `${project.title} — Case Study`,
+      title: project.title,
       description: project.summary,
       images: project.gallery.length
         ? [
@@ -43,15 +44,16 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
         : undefined,
     },
     twitter: {
-      title: `${project.title} — Case Study`,
+      title: project.title,
       description: project.summary,
       images: project.gallery.length ? [project.gallery[0].src] : undefined,
     },
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((entry) => entry.slug === params.slug);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await Promise.resolve(params);
+  const project = projects.find((entry) => entry.slug === slug);
 
   if (!project) {
     notFound();

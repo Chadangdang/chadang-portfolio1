@@ -127,7 +127,7 @@ export function ContactSection() {
               name="message"
               rows={5}
               required
-              placeholder="Project goals, fun stories, context—share as much as you'd like."
+              placeholder="Project goals, fun stories, context. Share as much as you'd like!"
               className="rounded-3xl border border-secondary/30 bg-white/80 px-6 py-4 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
             />
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
+
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -37,35 +38,28 @@ export function ProjectGallery({ images, className }: ProjectGalleryProps) {
   const activeImage = images[activeIndex] ?? images[0];
 
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-[2.75rem] border border-white/40 bg-white/40 shadow-[0_24px_60px_rgba(117,103,100,0.22)] backdrop-blur",
-        className,
-      )}
-    >
-      <div className="relative w-full" style={{ aspectRatio: "4 / 3" }}>
+    <div className={cn("flex flex-col items-center gap-4", className)}>
+      <div className="relative w-full">
         <AnimatePresence initial={false} mode="wait">
           <motion.div
             key={activeImage.src}
-            className="absolute inset-0"
+            className="flex justify-center"
             initial={{ opacity: 0.4, scale: 1.02 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <Image
+            <img
               src={activeImage.src}
               alt={activeImage.alt}
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              priority
+              className="max-h-[75vh] w-auto max-w-full rounded-3xl"
+              loading="lazy"
             />
           </motion.div>
         </AnimatePresence>
       </div>
       {totalSlides > 1 ? (
-        <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
+        <div className="flex gap-2">
           {images.map((image, index) => {
             const isActive = index === activeIndex;
             return (
@@ -74,10 +68,10 @@ export function ProjectGallery({ images, className }: ProjectGalleryProps) {
                 type="button"
                 onClick={() => handleSelect(index)}
                 className={cn(
-                  "h-2.5 w-2.5 rounded-full border border-white/70 transition-all",
+                  "h-2.5 w-2.5 rounded-full border border-[#756764]/40 transition-all",
                   isActive
-                    ? "w-6 bg-white"
-                    : "bg-white/40 hover:bg-white/70",
+                    ? "w-6 bg-[#756764]"
+                    : "bg-[#756764]/30 hover:bg-[#756764]/60",
                 )}
                 aria-label={`Show slide ${index + 1}`}
                 aria-pressed={isActive}
