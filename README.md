@@ -30,6 +30,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Create a new project on [Vercel](https://vercel.com/new) and import this repository.
+2. Set the following environment variables in the "Environment Variables" section:
+   - `SITE_URL` – the public production URL (for generating sitemap and robots.txt).
+   - `RESEND_API_KEY` – the API key from your [Resend](https://resend.com) account (for the contact form route).
+   - `RESEND_FROM_EMAIL` – the verified sender email address used by Resend.
+   You can copy `.env.example` to `.env.local` when developing locally.
+3. Use the default **Build Command** (`npm run build`) and **Output Directory** (`.next`).
+4. After the first successful deployment, the sitemap and robots.txt files will be generated automatically via the `postbuild` script.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For further details, review the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) and the [Vercel docs](https://vercel.com/docs).

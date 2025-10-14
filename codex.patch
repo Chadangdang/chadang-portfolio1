@@ -1,30 +1,42 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/components/providers.tsx b/src/components/providers.tsx
-index ec46dd4d850e1e013df23dd678a5183721b95ed7..a3fb4a82ca08058c178fab6da3bba2e09cf69971 100644
---- a/src/components/providers.tsx
-+++ b/src/components/providers.tsx
-@@ -1,20 +1,17 @@
- "use client";
- 
- import type { ReactNode } from "react";
- import Script from "next/script";
--import { DefaultSeo } from "next-seo";
--import { seoConfig } from "@/lib/seo";
- 
- export function Providers({ children }: { children: ReactNode }) {
-   return (
-     <>
--      <DefaultSeo {...seoConfig} />
-       <Script
-         strategy="lazyOnload"
-         data-domain="chadang.dev"
-         src="https://plausible.io/js/script.js"
-       />
-       {children}
-     </>
-   );
- }
-\ No newline at end of file
- 
+diff --git a/package.json b/package.json
+index 99b44827a2f5ae85379468aabda8bffb911cb6df..b3adbe18d018c2a530d3bc64c0128c99582756ef 100644
+--- a/package.json
++++ b/package.json
+@@ -1,32 +1,32 @@
+ {
+   "name": "chadang-portfolio1",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+-    "dev": "next dev --turbopack",
+-    "build": "next build --turbopack",
++    "dev": "next dev",
++    "build": "next build",
+     "postbuild": "next-sitemap",
+     "start": "next start",
+     "lint": "eslint"
+   },
+   "dependencies": {
+     "@radix-ui/react-avatar": "^1.1.10",
+     "@radix-ui/react-navigation-menu": "^1.2.14",
+     "@radix-ui/react-separator": "^1.1.7",
+     "@radix-ui/react-slot": "^1.2.3",
+     "class-variance-authority": "^0.7.1",
+     "clsx": "^2.1.1",
+     "framer-motion": "^12.23.24",
+     "lucide-react": "^0.545.0",
+     "next": "15.5.5",
+     "next-pwa": "^5.6.0",
+     "next-sitemap": "^4.2.3",
+     "react": "19.1.0",
+     "react-dom": "19.1.0",
+     "tailwind-merge": "^3.3.1"
+   },
+   "devDependencies": {
+     "@eslint/eslintrc": "^3",
+     "@tailwindcss/postcss": "^4",
+     "@types/next-pwa": "^5.6.9",
+     "@types/node": "^20", 
 EOF
 )
