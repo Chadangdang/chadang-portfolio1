@@ -1927,7 +1927,7 @@ function PortfolioSection() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$section$2d$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SectionHeader"], {
                         eyebrow: "Portfolio",
                         title: "Selected journeys",
-                        subtitle: "A curated look at shipped products, prototypes, and explorations. Each tile links to a deeper story—ready for your own URLs.",
+                        subtitle: "A collection of ideas turned real, Each project tells a story of growth, creativity, and a bit of grit. Every one taught me something new about building, leading, or simply pushing an idea forward.",
                         className: "text-white [&>*]:text-white [&_span]:text-white/70"
                     }, void 0, false, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/portfolio.tsx",

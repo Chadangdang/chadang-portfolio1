@@ -15,7 +15,7 @@ export function PortfolioSection() {
         <SectionHeader
           eyebrow="Portfolio"
           title="Selected journeys"
-          subtitle="A curated look at shipped products, prototypes, and explorations. Each tile links to a deeper story—ready for your own URLs."
+          subtitle="A collection of ideas turned real, Each project tells a story of growth, creativity, and a bit of grit. Every one taught me something new about building, leading, or simply pushing an idea forward."
           className="text-white [&>*]:text-white [&_span]:text-white/70"
         />
         <div className="grid gap-8 md:grid-cols-2">
