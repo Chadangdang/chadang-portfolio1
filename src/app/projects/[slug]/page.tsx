@@ -36,8 +36,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
         ? [
             {
               url: project.gallery[0].src,
-              width: 1280,
-              height: 960,
+              width: 64,
+              height: 48,
               alt: project.gallery[0].alt,
             },
           ]
