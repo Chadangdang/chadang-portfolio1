@@ -101,9 +101,6 @@ export function PortfolioSection() {
                       <span className="text-[10px] uppercase tracking-[0.22em] text-white/70 sm:text-xs sm:tracking-[0.3em]">View more →</span>
                     </div>
                     <p className="font-open-sans text-xs text-white/80 sm:text-base">{project.subtitle}</p>
-                    <p className="hidden font-open-sans text-xs leading-5 text-white/70 line-clamp-4 sm:block sm:text-base sm:leading-7">
-                      {project.summary}
-                    </p>
                     <div className="flex gap-1.5 overflow-x-auto pb-1 sm:flex-wrap sm:gap-2">
                       {project.skills.map((tag) => (
                         <Badge

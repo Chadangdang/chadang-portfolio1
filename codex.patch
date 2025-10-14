@@ -1,9 +1,9 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
 diff --git a/src/components/sections/portfolio.tsx b/src/components/sections/portfolio.tsx
-index 2d1705b5c6de1b9769b21ce73508ff88cd80e43e..817b0b78145b1b102451644321a3eb1e422ffc88 100644
+index 817b0b78145b1b102451644321a3eb1e422ffc88..9ad84d450eec64c9e052f926058d668542304823 100644
 --- a/src/components/sections/portfolio.tsx
 +++ b/src/components/sections/portfolio.tsx
-@@ -79,49 +79,49 @@ export function PortfolioSection() {
+@@ -79,49 +79,46 @@ export function PortfolioSection() {
                  viewport={{ once: true, amount: 0.2 }}
                  transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
                >
@@ -29,10 +29,9 @@ index 2d1705b5c6de1b9769b21ce73508ff88cd80e43e..817b0b78145b1b102451644321a3eb1e
                        <span className="text-[10px] uppercase tracking-[0.22em] text-white/70 sm:text-xs sm:tracking-[0.3em]">View more →</span>
                      </div>
                      <p className="font-open-sans text-xs text-white/80 sm:text-base">{project.subtitle}</p>
--                    <p className="font-open-sans text-xs leading-5 text-white/70 line-clamp-4 sm:text-base sm:leading-7">
-+                    <p className="hidden font-open-sans text-xs leading-5 text-white/70 line-clamp-4 sm:block sm:text-base sm:leading-7">
-                       {project.summary}
-                     </p>
+-                    <p className="hidden font-open-sans text-xs leading-5 text-white/70 line-clamp-4 sm:block sm:text-base sm:leading-7">
+-                      {project.summary}
+-                    </p>
                      <div className="flex gap-1.5 overflow-x-auto pb-1 sm:flex-wrap sm:gap-2">
                        {project.skills.map((tag) => (
                          <Badge
