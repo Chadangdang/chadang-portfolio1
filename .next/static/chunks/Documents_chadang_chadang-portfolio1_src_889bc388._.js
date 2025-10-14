@@ -727,24 +727,68 @@ __turbopack_context__.s([
     ()=>ContactSection
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$section$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/src/components/section-header.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/src/components/ui/button.tsx [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
 "use client";
 ;
 ;
 ;
 ;
+const EMAIL_PATTERN = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 function ContactSection() {
+    _s();
+    const [status, setStatus] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("idle");
+    const [feedback, setFeedback] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const handleSubmit = async (event)=>{
+        event.preventDefault();
+        const form = event.currentTarget;
+        if (!form.reportValidity()) {
+            return;
+        }
+        const formData = new FormData(form);
+        var _formData_get, _formData_get1, _formData_get2, _formData_get3;
+        const payload = {
+            name: String((_formData_get = formData.get("name")) !== null && _formData_get !== void 0 ? _formData_get : ""),
+            email: String((_formData_get1 = formData.get("email")) !== null && _formData_get1 !== void 0 ? _formData_get1 : ""),
+            phone: String((_formData_get2 = formData.get("phone")) !== null && _formData_get2 !== void 0 ? _formData_get2 : ""),
+            message: String((_formData_get3 = formData.get("message")) !== null && _formData_get3 !== void 0 ? _formData_get3 : "")
+        };
+        setStatus("loading");
+        setFeedback("");
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+            const result = await response.json();
+            if (!response.ok) {
+                var _result_error;
+                throw new Error((_result_error = result === null || result === void 0 ? void 0 : result.error) !== null && _result_error !== void 0 ? _result_error : "Something went wrong. Please try again.");
+            }
+            form.reset();
+            setStatus("success");
+            setFeedback("Thanks for reaching out! I'll get back to you soon.");
+        } catch (error) {
+            setStatus("error");
+            setFeedback(error instanceof Error ? error.message : "Unable to send your message right now. Please try again later.");
+        }
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "contact",
-        className: "relative py-24 sm:py-32",
+        className: "relative pt-24 pb-20 sm:pt-32 sm:pb-20",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#f7f1e8,rgba(203,166,147,0.45))]"
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                lineNumber: 10,
+                lineNumber: 63,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -753,10 +797,13 @@ function ContactSection() {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$section$2d$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SectionHeader"], {
                         eyebrow: "Contact",
                         title: "Let's build together",
-                        subtitle: "Share project details, collaboration ideas, or simply say hi. Every conversation starts with curiosity."
+                        subtitle: "From collaborations to casual chats, I’m always up for a good conversation!",
+                        eyebrowClassName: "text-[#80786B]",
+                        titleClassName: "text-[#80786B]",
+                        subtitleClassName: "text-[#80786B]"
                     }, void 0, false, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                        lineNumber: 12,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].form, {
@@ -777,17 +824,18 @@ function ContactSection() {
                             duration: 0.6,
                             ease: "easeOut"
                         },
+                        onSubmit: handleSubmit,
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "grid gap-2",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         htmlFor: "name",
-                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-secondary-foreground",
+                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]",
                                         children: "Enter your name*"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 25,
+                                        lineNumber: 82,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -796,16 +844,16 @@ function ContactSection() {
                                         type: "text",
                                         placeholder: "Jane Doe",
                                         required: true,
-                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-secondary-foreground shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 85,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 24,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -813,11 +861,11 @@ function ContactSection() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         htmlFor: "email",
-                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-secondary-foreground",
+                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]",
                                         children: "Enter your email*"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 38,
+                                        lineNumber: 95,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -826,16 +874,18 @@ function ContactSection() {
                                         type: "email",
                                         placeholder: "hello@chadang.dev",
                                         required: true,
-                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-secondary-foreground shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40",
+                                        pattern: EMAIL_PATTERN.source,
+                                        title: "Please enter a valid email address (for example, name@example.com)."
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 41,
+                                        lineNumber: 98,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 37,
+                                lineNumber: 94,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -843,11 +893,11 @@ function ContactSection() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         htmlFor: "phone",
-                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-secondary-foreground",
+                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]",
                                         children: "Phone number"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 51,
+                                        lineNumber: 110,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -855,16 +905,16 @@ function ContactSection() {
                                         name: "phone",
                                         type: "tel",
                                         placeholder: "Optional",
-                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-secondary-foreground shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+                                        className: "h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 54,
+                                        lineNumber: 113,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 50,
+                                lineNumber: 109,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -872,11 +922,11 @@ function ContactSection() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
                                         htmlFor: "message",
-                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-secondary-foreground",
+                                        className: "text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]",
                                         children: "Your message*"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 122,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -885,16 +935,16 @@ function ContactSection() {
                                         rows: 5,
                                         required: true,
                                         placeholder: "Project goals, timelines, context—share as much as you'd like.",
-                                        className: "rounded-3xl border border-secondary/30 bg-white/80 px-6 py-4 text-sm font-open-sans text-secondary-foreground shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+                                        className: "rounded-3xl border border-secondary/30 bg-white/80 px-6 py-4 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 125,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 62,
+                                lineNumber: 121,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -902,36 +952,48 @@ function ContactSection() {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                     type: "submit",
                                     className: "rounded-full bg-secondary px-10 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)]",
-                                    children: "Submit"
+                                    disabled: status === "loading",
+                                    children: status === "loading" ? "Sending..." : "Submit"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                    lineNumber: 76,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 75,
+                                lineNumber: 134,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                className: "text-center text-sm font-open-sans text-[#756764]",
+                                role: "status",
+                                "aria-live": "polite",
+                                children: feedback
+                            }, void 0, false, {
+                                fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
+                                lineNumber: 143,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                        lineNumber: 17,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                lineNumber: 11,
+                lineNumber: 64,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-        lineNumber: 9,
+        lineNumber: 62,
         columnNumber: 5
     }, this);
 }
+_s(ContactSection, "FLjnvbAOcYieeCSDOr1OIxCEZhk=");
 _c = ContactSection;
 var _c;
 __turbopack_context__.k.register(_c, "ContactSection");
@@ -955,7 +1017,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chad
 ;
 function FooterSection() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
-        className: "relative mt-24 bg-secondary/90 py-14 text-white",
+        className: "relative bg-secondary/90 py-14 text-white",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-x-0 top-0 -translate-y-1/2",

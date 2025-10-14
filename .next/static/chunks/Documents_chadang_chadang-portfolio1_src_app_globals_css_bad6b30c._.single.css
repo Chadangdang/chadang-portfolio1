@@ -1746,8 +1746,20 @@
     padding-right: calc(var(--spacing) * 2.5);
   }
 
+  .pb-0 {
+    padding-bottom: calc(var(--spacing) * 0);
+  }
+
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
+  }
+
+  .pb-15 {
+    padding-bottom: calc(var(--spacing) * 15);
   }
 
   .pb-16 {
@@ -2617,14 +2629,32 @@
   }
 
   @media (min-width: 40rem) {
+    .sm\:pt-32 {
+      padding-top: calc(var(--spacing) * 32);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:pb-0 {
       padding-bottom: calc(var(--spacing) * 0);
     }
   }
 
   @media (min-width: 40rem) {
+    .sm\:pb-6 {
+      padding-bottom: calc(var(--spacing) * 6);
+    }
+  }
+
+  @media (min-width: 40rem) {
     .sm\:pb-10 {
       padding-bottom: calc(var(--spacing) * 10);
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .sm\:pb-15 {
+      padding-bottom: calc(var(--spacing) * 15);
     }
   }
 

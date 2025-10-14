@@ -5,7 +5,7 @@ import { ArrowUp } from "lucide-react";
 
 export function FooterSection() {
   return (
-    <footer className="relative mt-24 bg-secondary/90 py-14 text-white">
+    <footer className="relative bg-secondary/90 py-14 text-white">
       <div className="absolute inset-x-0 top-0 -translate-y-1/2">
         <div className="mx-auto flex w-full max-w-6xl items-center justify-center">
           <Link
