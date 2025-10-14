@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function ServicesSection() {
   return (
-    <section className="relative py-24 sm:py-28">
+    <section className="relative pb-24 pt-16 sm:pb-28 sm:pt-20">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/40 to-transparent" />
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
@@ -25,7 +25,7 @@ export function ServicesSection() {
                     <div className="mb-6 inline-flex size-14 items-center justify-center rounded-2xl border border-white/60 bg-white/40 text-secondary-foreground shadow-md">
                       <Icon className="size-6 text-[#CBA693]" />
                     </div>
-                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-secondary-foreground">
+                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-[#CBA693]">
                       {service.title}
                     </CardTitle>
                   </CardHeader>

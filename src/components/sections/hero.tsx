@@ -87,7 +87,7 @@ export function HeroSection() {
           <div className="absolute -bottom-8 -right-4 h-32 w-32 rounded-full bg-secondary/40 blur-2xl" />
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/20 shadow-[var(--shadow-soft)] backdrop-blur">
             <Image
-              src="/images/portrait.jpg"
+              src="/images/hero/portrait.jpg"
               alt="Portrait of Chadang Phummarin"
               width={480}
               height={640}

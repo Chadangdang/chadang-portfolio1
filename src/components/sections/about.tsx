@@ -129,51 +129,51 @@ export function AboutSection() {
 
   const aboutHighlights = useMemo(
     () => [
-      (
-        <div className="flex flex-col gap-3">
-          <span>
-            Hi, I&apos;m <strong className="font-semibold text-secondary-foreground">Chadang Phummarin</strong>, but most people call me 
-            <strong className="font-semibold text-secondary-foreground">KanomTian</strong>. I&apos;m 21 years old and currently a 
-            <strong className="font-semibold text-secondary-foreground">
+      {
+        key: "introduction",
+        content: [
+          <>
+            Hi, I&apos;m <strong className="font-semibold">Chadang Phummarin</strong>, but most people call me
+            <strong className="font-semibold">KanomTian</strong>. I&apos;m 21 years old and currently a
+            <strong className="font-semibold">
               senior Digital Engineering student at Sirindhorn International Institute of Technology (SIIT), Thammasat University.
             </strong>
-          </span>
-        </div>
-      ),
-      (
-        <div className="flex flex-col gap-3">
-          <span>
+          </>,
+        ],
+      },
+      {
+        key: "curiosity",
+        content: [
+          <>
             I&apos;ve always been curious about how ideas become reality, how something that starts as a thought can turn into a
             product, an experience, or even a story that connects people.
-          </span>
-          <span>
-            Over the past few years, I&apos;ve built <strong className="font-semibold text-secondary-foreground">apps, websites, and games</strong>, but that&apos;s just one side of me.
-            I&apos;ve also <strong className="font-semibold text-secondary-foreground">
-              led events, worked on community projects, explored entrepreneurship
-            </strong>, which taught me to see challenges from both creative and strategic perspectives.
-          </span>
-        </div>
-      ),
-      (
-        <div className="flex flex-col gap-3">
-          <span>
-            I like mixing <strong className="font-semibold text-secondary-foreground">tech, creativity, and collaboration</strong> to keep life
-            interesting. What excites me most is <strong className="font-semibold text-secondary-foreground">connecting technology with creativity and people</strong>, and
-            turning ideas into something real and meaningful.
-          </span>
-        </div>
-      ),
-      (
-        <div className="flex flex-col gap-3">
-          <span>
-            At my core, I&apos;m someone who believes in learning by doing, collaborating with purpose, and finding inspiration in every
-            experience.
-          </span>
-          <span>
-            Because for me, it&apos;s never just about building things. It&apos;s about <strong className="font-semibold text-secondary-foreground">building experiences that connect, inspire, and make a difference</strong>.
-          </span>
-        </div>
-      ),
+          </>,
+          <>
+            Over the past few years, I&apos;ve built <strong className="font-semibold">apps, websites, and games</strong>, but that&apos;s just one side of me.
+            I&apos;ve also <strong className="font-semibold">led events, worked on community projects, explored entrepreneurship</strong>, which taught me to see challenges from both creative and strategic perspectives.
+          </>,
+        ],
+      },
+      {
+        key: "mixing",
+        content: [
+          <>
+            I like mixing <strong className="font-semibold">tech, creativity, and collaboration</strong> to keep life interesting.
+            What excites me most is <strong className="font-semibold">connecting technology with creativity and people</strong>, and turning ideas into something real and meaningful.
+          </>,
+        ],
+      },
+      {
+        key: "values",
+        content: [
+          <>
+            At my core, I&apos;m someone who believes in learning by doing, collaborating with purpose, and finding inspiration in every experience.
+          </>,
+          <>
+            Because for me, it&apos;s never just about building things. It&apos;s about <strong className="font-semibold">building experiences that connect, inspire, and make a difference</strong>.
+          </>,
+        ],
+      },
     ],
     [],
   );
@@ -181,9 +181,9 @@ export function AboutSection() {
 
   return (
     <section id="about" className="relative z-10 py-24 sm:py-28">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
         <motion.div
-          className="relative w-full max-w-lg shrink-0"
+          className="relative w-full max-w-lg shrink-0 lg:h-full"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -193,7 +193,7 @@ export function AboutSection() {
           <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-[2.5rem] border border-white/50 bg-white/40 backdrop-blur" />
           <div
             ref={containerRef}
-            className="relative overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y"
+            className="relative h-[420px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[480px] lg:h-full"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerEnd}
@@ -201,7 +201,7 @@ export function AboutSection() {
             onPointerLeave={handlePointerLeave}
           >
             <div
-              className="flex"
+              className="flex h-full"
               style={{
                 transform: `translateX(${translatePercentage}%)`,
                 transition: isDragging ? "none" : "transform 0.6s ease",
@@ -240,7 +240,7 @@ export function AboutSection() {
           </div>
         </motion.div>
         <motion.div
-          className="flex flex-1 flex-col gap-8"
+          className="flex flex-1 flex-col gap-8 lg:justify-center"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -254,13 +254,17 @@ export function AboutSection() {
               ABOUT ME
             </h2>
           </div>
-          <div className="grid gap-5 text-base leading-7 text-muted-foreground font-open-sans md:grid-cols-2">
-            {aboutHighlights.map((content, index) => (
+          <div className="grid gap-5 text-base leading-7 text-muted-foreground font-open-sans">
+            {aboutHighlights.map((highlight) => (
               <div
-                key={index}
+                key={highlight.key}
                 className="rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[var(--shadow-soft)] backdrop-blur"
               >
-                {content}
+                <div className="flex flex-col gap-3">
+                  {highlight.content.map((paragraph, paragraphIndex) => (
+                    <span key={`${highlight.key}-paragraph-${paragraphIndex}`}>{paragraph}</span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

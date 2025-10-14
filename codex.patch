@@ -1,74 +1,56 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/lib/content.ts b/src/lib/content.ts
-index 09d777f6d79ddec44259367b2fb78b7b7a08f8dd..041ff7889e9b500bd70d48fac7085ae235917987 100644
---- a/src/lib/content.ts
-+++ b/src/lib/content.ts
-@@ -9,63 +9,63 @@ export type Service = {
- export type Highlight = {
-   title: string;
-   description: string;
- };
+diff --git a/src/components/sections/services.tsx b/src/components/sections/services.tsx
+index 5cba3592a83669cc91d16070c359a2d98b3a7535..d2dc56a3d2411700bc587324ec6e2b9f9f2652e3 100644
+--- a/src/components/sections/services.tsx
++++ b/src/components/sections/services.tsx
+@@ -1,45 +1,45 @@
+ "use client";
  
- export type SkillGroup = {
-   category: string;
-   skills: string[];
- };
+ import { motion } from "framer-motion";
+ import { services } from "@/lib/content";
+ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
  
- export type Project = {
-   title: string;
-   subtitle: string;
-   description: string;
-   image: string;
-   href: string;
-   tags: string[];
- };
- 
- import { Cpu, Sparkles, Users } from "lucide-react";
- 
- export const services: Service[] = [
-   {
-     title: "Technology",
-     description:
--      "Full-stack product builds with modern frameworks, clean architecture, and performance-first thinking.",
-+      "I can turn ideas into functional and responsive websites or apps using modern tools and frameworks. From front-end visuals to back-end logic, I make sure everything works seamlessly together.",
-     icon: Cpu,
-   },
-   {
-     title: "Creativity",
-     description:
--      "Design systems, storytelling, and concept development that turn abstract ideas into delightful interfaces.",
-+      "I can bring ideas to life in different forms through design, storytelling, or fresh concepts that make a project stand out. I enjoy finding unique angles and transforming imagination into something real and engaging.",
-     icon: Sparkles,
-   },
-   {
-     title: "Collaboration",
-     description:
--      "Transparent communication, async-friendly workflows, and empathy that keep cross-functional teams aligned.",
-+      "I can work closely with others to share ideas, adapt to feedback, and keep communication open. I value teamwork and make sure every project moves smoothly toward a shared goal.",
-     icon: Users,
-   },
- ];
- 
- export const softSkills: Highlight[] = [
-   {
-     title: "Collaboration",
-     description:
-       "Thrives in multi-disciplinary squads with rituals that keep feedback loops active and respectful.",
-   },
-   {
-     title: "Leadership",
-     description:
-       "Guides sprints, scopes MVPs, and supports teammates with actionable mentoring and documentation.",
-   },
-   {
-     title: "Communication",
-     description:
-       "Bridges product, design, and engineering with concise updates and demo-driven checkpoints.",
-   },
-   {
-     title: "Responsibility",
-     description:
-       "Owns delivery from discovery to launch, balancing business objectives with user experience.",
-   }, 
+ export function ServicesSection() {
+   return (
+-    <section className="relative py-24 sm:py-28">
++    <section className="relative pb-24 pt-16 sm:pb-28 sm:pt-20">
+       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/40 to-transparent" />
+       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
+         <div className="grid gap-8 md:grid-cols-3">
+           {services.map((service, index) => {
+             const Icon = service.icon;
+             return (
+               <motion.div
+                 key={service.title}
+                 initial={{ opacity: 0, y: 24 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true, amount: 0.3 }}
+                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+               >
+                 <Card className="h-full rounded-3xl border-white/60 bg-white/50 p-6 shadow-[var(--shadow-soft)] backdrop-blur">
+                   <CardHeader className="px-0">
+                     <div className="mb-6 inline-flex size-14 items-center justify-center rounded-2xl border border-white/60 bg-white/40 text-secondary-foreground shadow-md">
+                       <Icon className="size-6 text-[#CBA693]" />
+                     </div>
+-                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-secondary-foreground">
++                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-[#CBA693]">
+                       {service.title}
+                     </CardTitle>
+                   </CardHeader>
+                   <CardContent className="px-0">
+                     <p className="font-open-sans text-sm leading-6 text-muted-foreground/90">
+                       {service.description}
+                     </p>
+                   </CardContent>
+                 </Card>
+               </motion.div>
+             );
+           })}
+         </div>
+       </div>
+     </section>
+   );
+ }
+\ No newline at end of file 
 EOF
 )
