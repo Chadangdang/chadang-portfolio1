@@ -23,6 +23,8 @@ export type Project = {
   image: string;
   href: string;
   tags: string[];
+  category: "code" | "organize" | "internship" | "competition";
+  date: string;
 };
 
 import { Cpu, Sparkles, Users } from "lucide-react";
@@ -150,6 +152,8 @@ export const projects: Project[] = [
     image: "/projects/project-1.svg",
     href: "#",
     tags: ["React", "TypeScript", "Yelp API"],
+    category: "code",
+    date: "2024-04-12",
   },
   {
     title: "Driveflow",
@@ -159,6 +163,8 @@ export const projects: Project[] = [
     image: "/projects/project-2.svg",
     href: "#",
     tags: ["Next.js", "Framer Motion", "Tailwind"],
+    category: "organize",
+    date: "2025-02-28",
   },
   {
     title: "Aura UI Kit",
@@ -168,6 +174,8 @@ export const projects: Project[] = [
     image: "/projects/project-3.svg",
     href: "#",
     tags: ["Design Systems", "shadcn/ui", "Storybook"],
+    category: "code",
+    date: "2023-11-05",
   },
   {
     title: "Nomad Atlas",
@@ -177,6 +185,8 @@ export const projects: Project[] = [
     image: "/projects/project-4.svg",
     href: "#",
     tags: ["PWA", "Next.js", "Mapbox"],
+    category: "competition",
+    date: "2023-07-18",
   },
   {
     title: "Studio Kanomtian",
@@ -186,6 +196,8 @@ export const projects: Project[] = [
     image: "/projects/project-5.svg",
     href: "#",
     tags: ["MDX", "Contentlayer", "Design"],
+    category: "internship",
+    date: "2023-04-03",
   },
   {
     title: "InSeason",
@@ -195,5 +207,7 @@ export const projects: Project[] = [
     image: "/projects/project-6.svg",
     href: "#",
     tags: ["Next.js", "Sanity", "Plausible"],
+    category: "code",
+    date: "2022-12-12",
   },
 ];

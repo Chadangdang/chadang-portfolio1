@@ -1614,12 +1614,20 @@
     margin-right: auto;
   }
 
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
+
   .mt-1 {
     margin-top: calc(var(--spacing) * 1);
   }
 
   .mt-1\.5 {
     margin-top: calc(var(--spacing) * 1.5);
+  }
+
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
   }
 
   .mt-3 {
@@ -1642,6 +1650,10 @@
     margin-top: calc(var(--spacing) * 15);
   }
 
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+
   .mt-24 {
     margin-top: calc(var(--spacing) * 24);
   }
@@ -1652,6 +1664,10 @@
 
   .mt-100 {
     margin-top: calc(var(--spacing) * 100);
+  }
+
+  .mb-0 {
+    margin-bottom: calc(var(--spacing) * 0);
   }
 
   .mb-4 {
@@ -2279,6 +2295,20 @@
     background-color: rgba(0, 0, 0, 0);
   }
 
+  .bg-white {
+    background-color: var(--color-white);
+  }
+
+  .bg-white\/5 {
+    background-color: rgba(255, 255, 255, .05);
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-white\/5 {
+      background-color: color-mix(in oklab, var(--color-white) 5%, transparent);
+    }
+  }
+
   .bg-white\/10 {
     background-color: rgba(255, 255, 255, .1);
   }
@@ -2530,6 +2560,10 @@
 
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
   }
 
   .px-6 {
@@ -2832,6 +2866,10 @@
     color: var(--primary-foreground);
   }
 
+  .text-secondary {
+    color: var(--secondary);
+  }
+
   .text-secondary-foreground {
     color: var(--secondary-foreground);
   }
@@ -3101,6 +3139,18 @@
   }
 
   @media (hover: hover) {
+    .hover\:border-white\/50:hover {
+      border-color: rgba(255, 255, 255, .5);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:border-white\/50:hover {
+        border-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
     .hover\:bg-\[\#80786B\]\/10:hover {
       background-color: rgba(128, 120, 107, .1);
       background-color: color(display-p3 .496572 .471672 .425117 / .1);
@@ -3165,6 +3215,12 @@
   @media (hover: hover) {
     .hover\:text-secondary-foreground:hover {
       color: var(--secondary-foreground);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-white:hover {
+      color: var(--color-white);
     }
   }
 

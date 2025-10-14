@@ -1,42 +1,146 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/components/sections/footer.tsx b/src/components/sections/footer.tsx
-index 8ab75b555624d6ac9db93a83385a9dff174b2d91..23b42641fae3987ce31b50eb52e5e2f308b7eb53 100644
---- a/src/components/sections/footer.tsx
-+++ b/src/components/sections/footer.tsx
-@@ -1,32 +1,32 @@
- "use client";
+diff --git a/src/lib/content.ts b/src/lib/content.ts
+index 0e68f7344da587fe5eb4e1809d4f1cc8b51754d1..d596d84c7efba163db303849ab432666768d1851 100644
+--- a/src/lib/content.ts
++++ b/src/lib/content.ts
+@@ -1,50 +1,52 @@
+ import type { LucideIcon } from "lucide-react";
  
- import Link from "next/link";
- import { ArrowUp } from "lucide-react";
+ export type Service = {
+   title: string;
+   description: string;
+   icon: LucideIcon;
+ };
  
- export function FooterSection() {
-   return (
--    <footer className="relative mt-24 bg-secondary/90 py-14 text-white">
-+    <footer className="relative bg-secondary/90 py-14 text-white">
-       <div className="absolute inset-x-0 top-0 -translate-y-1/2">
-         <div className="mx-auto flex w-full max-w-6xl items-center justify-center">
-           <Link
-             href="#home"
-             className="group inline-flex items-center gap-3 rounded-full border border-white/30 bg-secondary/80 px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-white/80 transition hover:bg-secondary"
-           >
-             Back to top
-             <span className="flex size-8 items-center justify-center rounded-full border border-white/20 bg-white/10 transition group-hover:translate-y-[-4px]">
-               <ArrowUp className="size-4" />
-             </span>
-           </Link>
-         </div>
-       </div>
-       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pt-12 text-center text-sm text-white/70">
-         <p className="font-open-sans text-sm text-white/80">
-           © {new Date().getFullYear()} Chadang Phummarin. Crafted with Next.js, Tailwind CSS, and a sprinkle of motion.
-         </p>
-         <div className="text-xs uppercase tracking-[0.35em] text-white/50">
-           Next.js • TypeScript • Tailwind • shadcn/ui • PWA ready
-         </div>
-       </div>
-     </footer>
-   );
- }
+ export type Highlight = {
+   title: string;
+   description: string;
+ };
+ 
+ export type SkillGroup = {
+   category: string;
+   skills: string[];
+ };
+ 
+ export type Project = {
+   title: string;
+   subtitle: string;
+   description: string;
+   image: string;
+   href: string;
+   tags: string[];
++  category: "code" | "organize" | "internship" | "competition";
++  date: string;
+ };
+ 
+ import { Cpu, Sparkles, Users } from "lucide-react";
+ 
+ export const services: Service[] = [
+   {
+     title: "Technology",
+     description:
+       "I can turn ideas into functional and responsive websites or apps using modern tools and frameworks. From front-end visuals to back-end logic, I make sure everything works seamlessly together.",
+     icon: Cpu,
+   },
+   {
+     title: "Creativity",
+     description:
+       "I can bring ideas to life in different forms through design, storytelling, or fresh concepts that make a project stand out. I enjoy finding unique angles and transforming imagination into something real and engaging.",
+     icon: Sparkles,
+   },
+   {
+     title: "Collaboration",
+     description:
+       "I can work closely with others to share ideas, adapt to feedback, and keep communication open. I value teamwork and make sure every project moves smoothly toward a shared goal.",
+     icon: Users,
+   },
+ ];
+ 
+@@ -128,72 +130,84 @@ export const programmingSkills: SkillGroup[] = [
+     category: "Design & Collaboration",
+     skills: ["Figma", "shadcn/ui", "Microsoft Office Suite"],
+   },
+ ];
+ 
+ export const tooling: SkillGroup[] = [
+   {
+     category: "Platforms & Databases",
+     skills: ["MySQL", "Firebase", "RESTful APIs"],
+   },
+   {
+     category: "Dev Tooling",
+     skills: ["Git", "GitHub", "VS Code", "Vercel"],
+   },
+ ];
+ 
+ export const projects: Project[] = [
+   {
+     title: "eatsome.",
+     subtitle: "Restaurant discovery with the Yelp API",
+     description:
+       "Responsive React experience with offline caching, interactive maps, and custom filtering.",
+     image: "/projects/project-1.svg",
+     href: "#",
+     tags: ["React", "TypeScript", "Yelp API"],
++    category: "code",
++    date: "2024-04-12",
+   },
+   {
+     title: "Driveflow",
+     subtitle: "Automotive event microsite",
+     description:
+       "Immersive landing page with cinematic imagery, fluid motion, and event booking flows.",
+     image: "/projects/project-2.svg",
+     href: "#",
+     tags: ["Next.js", "Framer Motion", "Tailwind"],
++    category: "organize",
++    date: "2024-02-28",
+   },
+   {
+     title: "Aura UI Kit",
+     subtitle: "Component system for multi-brand SaaS",
+     description:
+       "Accessible shadcn/ui extension with tokens, theming utilities, and Storybook documentation.",
+     image: "/projects/project-3.svg",
+     href: "#",
+     tags: ["Design Systems", "shadcn/ui", "Storybook"],
++    category: "code",
++    date: "2023-11-05",
+   },
+   {
+     title: "Nomad Atlas",
+     subtitle: "Travel planning progressive web app",
+     description:
+       "Offline-first itinerary builder with geo search, Contentlayer data, and push notifications.",
+     image: "/projects/project-4.svg",
+     href: "#",
+     tags: ["PWA", "Next.js", "Mapbox"],
++    category: "competition",
++    date: "2023-07-18",
+   },
+   {
+     title: "Studio Kanomtian",
+     subtitle: "Creative studio showcase",
+     description:
+       "Story-driven narrative with MDX-powered case studies and cinematic scroll interactions.",
+     image: "/projects/project-5.svg",
+     href: "#",
+     tags: ["MDX", "Contentlayer", "Design"],
++    category: "internship",
++    date: "2023-04-03",
+   },
+   {
+     title: "InSeason",
+     subtitle: "Farm-to-table marketplace",
+     description:
+       "Commerce prototype featuring realtime inventory, Sanity CMS, and Plausible analytics dashboards.",
+     image: "/projects/project-6.svg",
+     href: "#",
+     tags: ["Next.js", "Sanity", "Plausible"],
++    category: "code",
++    date: "2022-12-12",
+   },
+ ];
 \ No newline at end of file 
 EOF
 )
