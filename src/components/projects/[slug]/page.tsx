@@ -1,0 +1,75 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { use } from "react";
+
+import { ProjectDetail } from "@/components/projects/project-detail";
+import { FooterSection } from "@/components/sections/footer";
+import { SiteHeader } from "@/components/site-header";
+import { projects } from "@/lib/content";
+
+type ProjectPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+};
+
+export function generateStaticParams() {
+  return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((entry) => entry.slug === slug);
+
+  if (!project) {
+    return {
+      title: "Project not found",
+    };
+  }
+
+  return {
+    title: `${project.title} — Case Study`,
+    description: project.summary,
+    openGraph: {
+      title: `${project.title} — Case Study`,
+      description: project.summary,
+      images: project.gallery.length
+        ? [
+            {
+              url: project.gallery[0].src,
+              width: 1280,
+              height: 960,
+              alt: project.gallery[0].alt,
+            },
+          ]
+        : undefined,
+    },
+    twitter: {
+      title: `${project.title} — Case Study`,
+      description: project.summary,
+      images: project.gallery.length ? [project.gallery[0].src] : undefined,
+    },
+  };
+}
+
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = use(params);
+  const project = projects.find((entry) => entry.slug === slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return (
+    <div className="relative min-h-screen bg-secondary/10">
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),_transparent_60%)]" />
+      <SiteHeader linkPrefix="/" homeHref="/" />
+      <main className="relative z-10 flex flex-col gap-16 pt-32 pb-24">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <ProjectDetail project={project} />
+        </div>
+      </main>
+      <FooterSection />
+    </div>
+  );
+}

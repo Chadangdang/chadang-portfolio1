@@ -11,7 +11,14 @@ const links = [
   { href: "#portfolio", label: "Portfolio" },
 ];
 
-export function SiteHeader() {
+type SiteHeaderProps = {
+  linkPrefix?: string;
+  homeHref?: string;
+};
+
+export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderProps) {
+  const resolveHref = (path: string) => `${linkPrefix}${path}`;
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -16 }}
@@ -19,7 +26,8 @@ export function SiteHeader() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed left-1/2 top-6 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]"
     >
-      <Link href="#home" className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]">
+      <Link href="#home" 
+      className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]">
         CHADANG
       </Link>
       <div className="hidden items-center gap-8 md:flex">
@@ -28,7 +36,7 @@ export function SiteHeader() {
             {links.map((link) => (
               <NavigationMenuItem key={link.href}>
                 <a
-                  href={link.href}
+                  href={resolveHref(link.href)}
                   className="text-sm font-semibold uppercase tracking-[0.3em] text-[#756764] transition-colors hover:text-[#756764]"
                 >
                   {link.label}

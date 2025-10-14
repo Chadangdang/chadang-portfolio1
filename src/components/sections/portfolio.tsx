@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 
@@ -70,22 +71,25 @@ export function PortfolioSection() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             {filteredProjects.map((project, index) => (
-              <motion.a
-                key={project.title}
-                href={project.href}
-                className="group relative overflow-hidden rounded-[2.25rem] border border-white/20 bg-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.25)] transition-transform hover:-translate-y-2"
+              <motion.div
+                key={project.slug}
+                className="group"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
               >
-                <div className="relative h-60 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={`${project.title} preview`}
-                    fill
-                    sizes="(min-width: 1024px) 50vw, (min-width: 768px) 60vw, 100vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                <Link
+                href={{ pathname: `/projects/${project.slug}` }}
+                className="relative block overflow-hidden rounded-[2.25rem] border border-white/20 bg-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.25)] transition-transform hover:-translate-y-2"
+                >
+                  <div className="relative h-60 w-full overflow-hidden">
+                    <Image
+                      src={project.gallery[0].src}
+                      alt={project.gallery[0].alt}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, (min-width: 768px) 60vw, 100vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
                 </div>
@@ -97,11 +101,11 @@ export function PortfolioSection() {
                     <span className="text-xs uppercase tracking-[0.3em] text-white/70">View more →</span>
                   </div>
                   <p className="font-open-sans text-sm text-white/80">{project.subtitle}</p>
-                  <p className="font-open-sans text-sm leading-6 text-white/70">
-                    {project.description}
+                  <p className="font-open-sans text-sm leading-6 text-white/70 line-clamp-4">
+                    {project.summary}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
+                  <div className="flex gap-2 overflow-x-auto pb-1">
+                    {project.skills.map((tag) => (
                       <Badge
                         key={tag}
                         variant="outline"
@@ -112,7 +116,8 @@ export function PortfolioSection() {
                     ))}
                   </div>
                 </div>
-              </motion.a>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
