@@ -9,13 +9,10 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/chevron-left.js [app-client] (ecmascript) <export default as ChevronLeft>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-client] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 ;
 ;
@@ -189,25 +186,27 @@ function AboutSection() {
                                     children: "Chadang Phummarin"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 137,
+                                    lineNumber: 136,
                                     columnNumber: 26
                                 }, this),
                                 ", but most people call me",
+                                " ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                     className: "font-semibold",
                                     children: "KanomTian"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 137,
                                     columnNumber: 13
                                 }, this),
                                 ". I'm 21 years old and currently a",
+                                " ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                     className: "font-semibold",
                                     children: "senior Digital Engineering student at Sirindhorn International Institute of Technology (SIIT), Thammasat University."
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 138,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -228,7 +227,7 @@ function AboutSection() {
                                     children: "apps, websites, and games"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 153,
+                                    lineNumber: 152,
                                     columnNumber: 54
                                 }, this),
                                 ", but that's just one side of me. I've also ",
@@ -237,7 +236,7 @@ function AboutSection() {
                                     children: "led events, worked on community projects, explored entrepreneurship"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 154,
+                                    lineNumber: 153,
                                     columnNumber: 28
                                 }, this),
                                 ", which taught me to see challenges from both creative and strategic perspectives."
@@ -256,7 +255,7 @@ function AboutSection() {
                                     children: "tech, creativity, and collaboration"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 161,
                                     columnNumber: 27
                                 }, this),
                                 " to keep life interesting. What excites me most is ",
@@ -265,7 +264,7 @@ function AboutSection() {
                                     children: "connecting technology with creativity and people"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 163,
+                                    lineNumber: 162,
                                     columnNumber: 37
                                 }, this),
                                 ", and turning ideas into something real and meaningful."
@@ -287,7 +286,7 @@ function AboutSection() {
                                     children: "building experiences that connect, inspire, and make a difference"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 173,
                                     columnNumber: 89
                                 }, this),
                                 "."
@@ -302,13 +301,13 @@ function AboutSection() {
     const coreHighlight = aboutHighlights[3];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "about",
-        className: "relative z-10 py-24 sm:py-28",
+        className: "relative z-10 pt-24 pb-16 sm:pt-28 sm:pb-0",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                        className: "relative w-full max-w-md shrink-0 lg:h-full",
+                        className: "relative w-full max-w-md shrink-0 lg:h-full mt-10 sm:mt-10",
                         initial: {
                             opacity: 0,
                             x: -40
@@ -330,14 +329,14 @@ function AboutSection() {
                                 className: "absolute -left-6 -top-8 h-32 w-32 rounded-full bg-secondary/30 blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 196,
+                                lineNumber: 195,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -right-8 bottom-10 h-28 w-28 rounded-[2.5rem] border border-white/50 bg-white/40 backdrop-blur"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 197,
+                                lineNumber: 196,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -366,59 +365,17 @@ function AboutSection() {
                                                     draggable: false
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                                    lineNumber: 216,
+                                                    lineNumber: 215,
                                                     columnNumber: 19
                                                 }, this)
                                             }, image.src, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                                lineNumber: 215,
+                                                lineNumber: 214,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                        lineNumber: 207,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        type: "button",
-                                        onClick: ()=>{
-                                            prevSlide();
-                                            updateDragOffset(0);
-                                            resetAutoPlay();
-                                        },
-                                        className: "group absolute left-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white",
-                                        "aria-label": "Previous image",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
-                                            className: "h-5 w-5"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                            lineNumber: 237,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                        lineNumber: 227,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        type: "button",
-                                        onClick: ()=>{
-                                            nextSlide();
-                                            updateDragOffset(0);
-                                            resetAutoPlay();
-                                        },
-                                        className: "group absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white",
-                                        "aria-label": "Next image",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
-                                            className: "h-5 w-5"
-                                        }, void 0, false, {
-                                            fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                            lineNumber: 249,
-                                            columnNumber: 15
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                        lineNumber: 239,
+                                        lineNumber: 206,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -434,24 +391,24 @@ function AboutSection() {
                                                 "aria-label": "Go to slide ".concat(index + 1)
                                             }, index, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                                lineNumber: 253,
+                                                lineNumber: 228,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                        lineNumber: 251,
+                                        lineNumber: 226,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 198,
+                                lineNumber: 197,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                        lineNumber: 189,
+                        lineNumber: 188,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -484,16 +441,16 @@ function AboutSection() {
                                     children: "ABOUT ME"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                    lineNumber: 280,
+                                    lineNumber: 255,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 279,
+                                lineNumber: 254,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "grid gap-4 text-base leading-7 text-muted-foreground font-open-sans",
+                                className: "grid gap-4 text-sm leading-6 text-muted-foreground font-open-sans sm:text-base sm:leading-7",
                                 children: primaryHighlights.map((highlight)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[var(--shadow-soft)] backdrop-blur",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -502,38 +459,38 @@ function AboutSection() {
                                                     children: paragraph
                                                 }, "".concat(highlight.key, "-paragraph-").concat(paragraphIndex), false, {
                                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                                    lineNumber: 295,
+                                                    lineNumber: 270,
                                                     columnNumber: 21
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                            lineNumber: 293,
+                                            lineNumber: 268,
                                             columnNumber: 17
                                         }, this)
                                     }, highlight.key, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                        lineNumber: 289,
+                                        lineNumber: 264,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 287,
+                                lineNumber: 262,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                        lineNumber: 272,
+                        lineNumber: 247,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                lineNumber: 188,
+                lineNumber: 187,
                 columnNumber: 7
             }, this),
             coreHighlight ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6 lg:px-8",
+                className: "mx-auto mt-3 w-full max-w-6xl px-4 sm:mt-5 sm:px-6 lg:px-8",
                 initial: {
                     opacity: 0,
                     y: 40
@@ -551,35 +508,35 @@ function AboutSection() {
                     ease: "easeOut"
                 },
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "rounded-3xl border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur",
+                    className: "rounded-3xl border border-white/60 bg-white/60 p-6 shadow-[var(--shadow-soft)] backdrop-blur",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex flex-col gap-3 text-base leading-7 text-muted-foreground font-open-sans",
+                        className: "flex flex-col gap-3 text-sm leading-6 text-muted-foreground font-open-sans sm:text-base sm:leading-7",
                         children: coreHighlight.content.map((paragraph, paragraphIndex)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: paragraph
                             }, "".concat(coreHighlight.key, "-paragraph-").concat(paragraphIndex), false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                                lineNumber: 314,
+                                lineNumber: 288,
                                 columnNumber: 17
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                        lineNumber: 312,
+                        lineNumber: 286,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                    lineNumber: 311,
+                    lineNumber: 285,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-                lineNumber: 304,
+                lineNumber: 279,
                 columnNumber: 9
             }, this) : null
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/about.tsx",
-        lineNumber: 187,
+        lineNumber: 186,
         columnNumber: 5
     }, this);
 }

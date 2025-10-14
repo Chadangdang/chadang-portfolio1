@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 const galleryImages = [
@@ -134,10 +133,10 @@ export function AboutSection() {
         key: "introduction",
         content: [
           <>
-            Hi, I&apos;m <strong className="font-semibold">Chadang Phummarin</strong>, but most people call me
-            <strong className="font-semibold">KanomTian</strong>. I&apos;m 21 years old and currently a
+            Hi, I&apos;m <strong className="font-semibold">Chadang Phummarin</strong>, but most people call me{" "}
+            <strong className="font-semibold">KanomTian</strong>. I&apos;m 21 years old and currently a{" "}
             <strong className="font-semibold">
-              senior Digital Engineering student at Sirindhorn International Institute of Technology (SIIT), Thammasat University.
+            senior Digital Engineering student at Sirindhorn International Institute of Technology (SIIT), Thammasat University.
             </strong>
           </>,
         ],
@@ -184,10 +183,10 @@ export function AboutSection() {
   const coreHighlight = aboutHighlights[3];
 
   return (
-    <section id="about" className="relative z-10 py-24 sm:py-28">
+    <section id="about" className="relative z-10 pt-24 pb-16 sm:pt-28 sm:pb-0">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
         <motion.div
-          className="relative w-full max-w-md shrink-0 lg:h-full"
+          className="relative w-full max-w-md shrink-0 lg:h-full mt-10 sm:mt-10"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -224,30 +223,6 @@ export function AboutSection() {
                 </div>
               ))}
             </div>
-            <button
-              type="button"
-              onClick={() => {
-                prevSlide();
-                updateDragOffset(0);
-                resetAutoPlay();
-              }}
-              className="group absolute left-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white"
-              aria-label="Previous image"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                nextSlide();
-                updateDragOffset(0);
-                resetAutoPlay();
-              }}
-              className="group absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white"
-              aria-label="Next image"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
             <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
               {galleryImages.map((_, index) => (
                 <button
@@ -284,7 +259,7 @@ export function AboutSection() {
               ABOUT ME
             </h2>
           </div>
-          <div className="grid gap-4 text-base leading-7 text-muted-foreground font-open-sans">
+          <div className="grid gap-4 text-sm leading-6 text-muted-foreground font-open-sans sm:text-base sm:leading-7">
             {primaryHighlights.map((highlight) => (
               <div
                 key={highlight.key}
@@ -302,14 +277,13 @@ export function AboutSection() {
       </div>
       {coreHighlight ? (
         <motion.div
-          className="mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6 lg:px-8"
-          initial={{ opacity: 0, y: 40 }}
+          className="mx-auto mt-3 w-full max-w-6xl px-4 sm:mt-5 sm:px-6 lg:px-8"          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="rounded-3xl border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
-            <div className="flex flex-col gap-3 text-base leading-7 text-muted-foreground font-open-sans">
+          <div className="rounded-3xl border border-white/60 bg-white/60 p-6 shadow-[var(--shadow-soft)] backdrop-blur">
+            <div className="flex flex-col gap-3 text-sm leading-6 text-muted-foreground font-open-sans sm:text-base sm:leading-7">
               {coreHighlight.content.map((paragraph, paragraphIndex) => (
                 <span key={`${coreHighlight.key}-paragraph-${paragraphIndex}`}>{paragraph}</span>
               ))}
