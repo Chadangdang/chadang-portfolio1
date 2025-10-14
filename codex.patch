@@ -1,116 +1,30 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/lib/content-projects.ts b/src/lib/content-projects.ts
-index 59b20ec1c95ba2dc0aa93e04b27f76625327cf3e..85894aa79161758bf7d8d0812affcb45f66f5d04 100644
---- a/src/lib/content-projects.ts
-+++ b/src/lib/content-projects.ts
-@@ -1,49 +1,59 @@
- export type ProjectGalleryImage = {
--    src: string;
--    alt: string;
--  };
--  
--  export type Project = {
--    slug: string;
--    title: string;
--    subtitle: string;
--    summary: string;
--    description: string[];
--    gallery: ProjectGalleryImage[];
--    skills: string[];
--    category: "code" | "organize" | "internship" | "competition";
--    date: string;
--  };
--  
--  export const projects: Project[] = [
--    {
--      slug: "bookstore-app",
--      title: "BookstoreApp",
--      subtitle: "Cross-platform bookstore experience",
--      summary:
--        "Expo and Firebase-powered mobile app that delivers curated recommendations, realtime inventory, and secure checkout across devices.",
--      description: [
--        "BookstoreApp is a cross-platform mobile experience built with Expo (React Native + TypeScript) for DES427 Mobile Application Programming.",
--        "The app features Firebase Authentication for secure sign-up, multi-criteria search across title, author, publisher, and ISBN, plus personalized recommendations surfaced through curated collections.",
--        "A realtime cart ties directly to Firestore to validate stock, sync order history, and keep profiles up to date whether shoppers are on web or mobile via Vercel and Expo Go deployments.",
--      ],
--      gallery: [
--        { src: "/projects/bookstoreapp/bookstoreapp1.jpeg", alt: "BookstoreApp onboarding screens" },
--        { src: "/projects/bookstoreapp/bookstoreapp2.jpeg", alt: "BookstoreApp book discovery feed" },
--        { src: "/projects/bookstoreapp/bookstoreapp3.jpeg", alt: "BookstoreApp search results" },
--        { src: "/projects/bookstoreapp/bookstoreapp4.jpeg", alt: "BookstoreApp checkout and order history" },
--      ],
--      skills: [
--        "React Native",
--        "Expo",
--        "TypeScript",
--        "Firebase (Firestore & Auth)",
--        "Context API",
--        "UI/UX",
--        "Version Control (Git/GitHub)",
--        "Web Deployment (Vercel)",
--      ],
--      category: "code",
--      date: "2025-05-15",
--    },
--  ];  
+diff --git a/src/components/providers.tsx b/src/components/providers.tsx
+index ec46dd4d850e1e013df23dd678a5183721b95ed7..a3fb4a82ca08058c178fab6da3bba2e09cf69971 100644
+--- a/src/components/providers.tsx
++++ b/src/components/providers.tsx
+@@ -1,20 +1,17 @@
+ "use client";
+ 
+ import type { ReactNode } from "react";
+ import Script from "next/script";
+-import { DefaultSeo } from "next-seo";
+-import { seoConfig } from "@/lib/seo";
+ 
+ export function Providers({ children }: { children: ReactNode }) {
+   return (
+     <>
+-      <DefaultSeo {...seoConfig} />
+       <Script
+         strategy="lazyOnload"
+         data-domain="chadang.dev"
+         src="https://plausible.io/js/script.js"
+       />
+       {children}
+     </>
+   );
+ }
 \ No newline at end of file
-+  src: string;
-+  alt: string;
-+};
-+
-+export type ProjectLink = {
-+  label: string;
-+  href: string;
-+};
-+
-+export type Project = {
-+  slug: string;
-+  title: string;
-+  subtitle: string;
-+  summary: string;
-+  description: string[];
-+  gallery: ProjectGalleryImage[];
-+  skills: string[];
-+  links?: ProjectLink[];
-+  category: "code" | "organize" | "internship" | "competition";
-+  date: string;
-+};
-+
-+export const projects: Project[] = [
-+  {
-+    slug: "bookstore-app",
-+    title: "BookstoreApp",
-+    subtitle: "Cross-platform bookstore experience",
-+    summary:
-+      "Expo and Firebase-powered mobile app that delivers curated recommendations, realtime inventory, and secure checkout across devices.",
-+    description: [
-+      "BookstoreApp is a cross-platform mobile experience built with Expo (React Native + TypeScript) for DES427 Mobile Application Programming.",
-+      "The app features Firebase Authentication for secure sign-up, multi-criteria search across title, author, publisher, and ISBN, plus personalized recommendations surfaced through curated collections.",
-+      "A realtime cart ties directly to Firestore to validate stock, sync order history, and keep profiles up to date whether shoppers are on web or mobile via Vercel and Expo Go deployments.",
-+    ],
-+    gallery: [
-+      { src: "/projects/bookstoreapp/bookstoreapp1.jpeg", alt: "BookstoreApp onboarding screens" },
-+      { src: "/projects/bookstoreapp/bookstoreapp2.jpeg", alt: "BookstoreApp book discovery feed" },
-+      { src: "/projects/bookstoreapp/bookstoreapp3.jpeg", alt: "BookstoreApp search results" },
-+      { src: "/projects/bookstoreapp/bookstoreapp4.jpeg", alt: "BookstoreApp checkout and order history" },
-+    ],
-+    skills: [
-+      "React Native",
-+      "Expo",
-+      "TypeScript",
-+      "Firebase (Firestore & Auth)",
-+      "Context API",
-+      "UI/UX",
-+      "Version Control (Git/GitHub)",
-+      "Web Deployment (Vercel)",
-+    ],
-+    links: [
-+      { label: "GitHub Repo", href: "https://github.com/Chadangdang/BookstoreApp" },
-+      { label: "Live Demo", href: "https://example.com/bookstoreapp" },
-+    ],
-+    category: "code",
-+    date: "2025-05-15",
-+  },
-+]; 
+ 
 EOF
 )

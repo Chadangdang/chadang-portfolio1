@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "ade3650c35fe9e1aa0da5bb144633b17",
-    "previewModeSigningKey": "7d9756ef6eff2f5d2b62d78b52d3b65b72122f5990d1de7de6b5f60283ffa943",
-    "previewModeEncryptionKey": "b9724ebad092436c174574776afbfb73a262460c8f0634d8e60afe5df45383a2"
-  }
-}
+{"version":4,"routes":{"/projects/bookstore-app":{}},"dynamicRoutes":{"/projects/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/projects/[slug]","routeRegex":"^\\/projects\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"8166df9427a97a08f511abf29d61e4d2","previewModeSigningKey":"0bfef059ee874c2d992917e99bf048aa724aa6800f14cc362f34dd35fe15ad34","previewModeEncryptionKey":"e222ea2fa95967d8b1c01f050d1a28bcf62d86f0f93d0e94ce419f59fd0fc7c5"}}
