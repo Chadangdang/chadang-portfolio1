@@ -186,7 +186,7 @@ export function AboutSection() {
     <section id="about" className="relative z-10 pt-20 pb-12 sm:pt-28 sm:pb-0">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
         <motion.div
-          className="relative mt-4 w-full max-w-md shrink-0 sm:mt-8 lg:mt-10 lg:h-full"
+          className="relative mt-4 w-full max-w-md shrink-0 sm:mt-8 lg:mt-10 lg:h-full mx-auto lg:mx-0"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}

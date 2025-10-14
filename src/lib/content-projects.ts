@@ -24,7 +24,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "bookstore-app",
-    title: "BookstoreApp",
+    title: "Bookstore App",
     subtitle: "A cross-platform bookstore app for browsing, purchasing, and managing books in real time.",
     summary:
       "Cross-platform bookstore app built with Expo and Firebase, offering curated book recommendations, real-time stock updates, and secure checkout across devices.",
