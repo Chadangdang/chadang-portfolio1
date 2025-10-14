@@ -21,7 +21,7 @@ export function FooterSection() {
       </div>
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-6 px-4 pt-12 text-center text-sm text-white/70">
         <p className="font-open-sans text-sm text-white/80">
-          © {new Date().getFullYear()} Chadang Phummarin. Crafted with Next.js, Tailwind CSS, and a sprinkle of motion.
+          © {new Date().getFullYear()} Chadang Phummarin. Crafted with late-night ideas and career-daydreams.
         </p>
         <div className="text-xs uppercase tracking-[0.35em] text-white/50">
           Next.js • TypeScript • Tailwind • shadcn/ui • PWA ready

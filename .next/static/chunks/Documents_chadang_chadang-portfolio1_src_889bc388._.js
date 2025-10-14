@@ -1066,7 +1066,7 @@ function FooterSection() {
                         children: [
                             "© ",
                             new Date().getFullYear(),
-                            " Chadang Phummarin. Crafted with Next.js, Tailwind CSS, and a sprinkle of motion."
+                            " Chadang Phummarin. Crafted with late-night ideas and career-daydreams."
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/footer.tsx",
