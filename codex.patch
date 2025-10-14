@@ -1,53 +1,209 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/components/sections/services.tsx b/src/components/sections/services.tsx
-index 5cba3592a83669cc91d16070c359a2d98b3a7535..d2dc56a3d2411700bc587324ec6e2b9f9f2652e3 100644
---- a/src/components/sections/services.tsx
-+++ b/src/components/sections/services.tsx
-@@ -1,45 +1,45 @@
+diff --git a/src/components/sections/about.tsx b/src/components/sections/about.tsx
+index 8fc78f77edff3e07eeb0114dc205dfeca25965e6..63e78511ba5fe4a469b3fa8fda888ed2e7b77485 100644
+--- a/src/components/sections/about.tsx
++++ b/src/components/sections/about.tsx
+@@ -1,29 +1,30 @@
  "use client";
  
+ import Image from "next/image";
  import { motion } from "framer-motion";
- import { services } from "@/lib/content";
- import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
++import { ChevronLeft, ChevronRight } from "lucide-react";
+ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
  
- export function ServicesSection() {
+ const galleryImages = [
+   {
+     src: "/images/about/about1.jpg",
+     alt: "Chadang presenting work on a laptop",
+   },
+   {
+     src: "/images/about/about2.JPG",
+     alt: "Chadang collaborating with teammates",
+   },
+   {
+     src: "/images/about/about3.jpg",
+     alt: "Chadang hosting a workshop",
+   },
+   {
+     src: "/images/about/about4.JPG",
+     alt: "Chadang speaking on stage",
+   },
+   {
+     src: "/images/about/about5.jpg",
+     alt: "Chadang exploring creative ideas",
+   },
+   {
+     src: "/images/about/about6.jpg",
+@@ -157,119 +158,165 @@ export function AboutSection() {
+       {
+         key: "mixing",
+         content: [
+           <>
+             I like mixing <strong className="font-semibold">tech, creativity, and collaboration</strong> to keep life interesting.
+             What excites me most is <strong className="font-semibold">connecting technology with creativity and people</strong>, and turning ideas into something real and meaningful.
+           </>,
+         ],
+       },
+       {
+         key: "values",
+         content: [
+           <>
+             At my core, I&apos;m someone who believes in learning by doing, collaborating with purpose, and finding inspiration in every experience.
+           </>,
+           <>
+             Because for me, it&apos;s never just about building things. It&apos;s about <strong className="font-semibold">building experiences that connect, inspire, and make a difference</strong>.
+           </>,
+         ],
+       },
+     ],
+     [],
+   );
+   const translatePercentage = -currentIndex * 100 + (dragOffset / widthRef.current) * 100;
+ 
++  const primaryHighlights = aboutHighlights.slice(0, 3);
++  const coreHighlight = aboutHighlights[3];
++
    return (
--    <section className="relative py-24 sm:py-28">
-+    <section className="relative pb-24 pt-16 sm:pb-28 sm:pt-20">
-       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/40 to-transparent" />
-       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
-         <div className="grid gap-8 md:grid-cols-3">
-           {services.map((service, index) => {
-             const Icon = service.icon;
-             return (
-               <motion.div
-                 key={service.title}
-                 initial={{ opacity: 0, y: 24 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 viewport={{ once: true, amount: 0.3 }}
-                 transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+     <section id="about" className="relative z-10 py-24 sm:py-28">
+-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
++      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
+         <motion.div
+-          className="relative w-full max-w-lg shrink-0 lg:h-full"
++          className="relative w-full max-w-md shrink-0 lg:h-full"
+           initial={{ opacity: 0, x: -40 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           viewport={{ once: true, amount: 0.4 }}
+           transition={{ duration: 0.7, ease: "easeOut" }}
+         >
+           <div className="absolute -left-6 -top-8 h-32 w-32 rounded-full bg-secondary/30 blur-2xl" />
+           <div className="absolute -right-8 bottom-10 h-28 w-28 rounded-[2.5rem] border border-white/50 bg-white/40 backdrop-blur" />
+           <div
+             ref={containerRef}
+-            className="relative h-[420px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[480px] lg:h-full"
++            className="relative h-[360px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[420px] lg:h-full"
+             onPointerDown={handlePointerDown}
+             onPointerMove={handlePointerMove}
+             onPointerUp={handlePointerEnd}
+             onPointerCancel={handlePointerEnd}
+             onPointerLeave={handlePointerLeave}
+           >
+             <div
+               className="flex h-full"
+               style={{
+                 transform: `translateX(${translatePercentage}%)`,
+                 transition: isDragging ? "none" : "transform 0.6s ease",
+               }}
+             >
+               {galleryImages.map((image) => (
+                 <div key={image.src} className="relative h-full w-full shrink-0">
+                   <Image
+                     src={image.src}
+                     alt={image.alt}
+                     width={560}
+                     height={720}
+                     className="h-full w-full select-none object-cover"
+                     draggable={false}
+                   />
+                 </div>
+               ))}
+             </div>
++            <button
++              type="button"
++              onClick={() => {
++                prevSlide();
++                updateDragOffset(0);
++                resetAutoPlay();
++              }}
++              className="group absolute left-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white"
++              aria-label="Previous image"
++            >
++              <ChevronLeft className="h-5 w-5" />
++            </button>
++            <button
++              type="button"
++              onClick={() => {
++                nextSlide();
++                updateDragOffset(0);
++                resetAutoPlay();
++              }}
++              className="group absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-center rounded-full border border-white/60 bg-white/70 p-2 text-[#80786B] transition hover:bg-white"
++              aria-label="Next image"
++            >
++              <ChevronRight className="h-5 w-5" />
++            </button>
+             <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 gap-2">
+               {galleryImages.map((_, index) => (
+                 <button
+                   key={index}
+                   type="button"
+                   onClick={() => {
+                     setCurrentIndex(index);
+                     updateDragOffset(0);
+                     resetAutoPlay();
+                   }}
+                   className={`h-2.5 w-2.5 rounded-full transition-all ${
+-                    index === currentIndex ? "bg-secondary-foreground" : "bg-white/60"
++                    index === currentIndex
++                      ? "bg-[#CBA693]"
++                      : "bg-[#CBA693]/40"
+                   }`}
+                   aria-label={`Go to slide ${index + 1}`}
+                 />
+               ))}
+             </div>
+           </div>
+         </motion.div>
+         <motion.div
+-          className="flex flex-1 flex-col gap-8 lg:justify-center"
++          className="flex flex-1 flex-col gap-6 lg:justify-center"
+           initial={{ opacity: 0, x: 40 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           viewport={{ once: true, amount: 0.3 }}
+           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+         >
+           <div className="flex flex-col gap-4">
+             <h2
+               className="font-montserrat text-3xl font-semibold tracking-[0.22em] uppercase sm:text-4xl"
+               style={{ color: "#80786B" }}
+             >
+               ABOUT ME
+             </h2>
+           </div>
+-          <div className="grid gap-5 text-base leading-7 text-muted-foreground font-open-sans">
+-            {aboutHighlights.map((highlight) => (
++          <div className="grid gap-4 text-base leading-7 text-muted-foreground font-open-sans">
++            {primaryHighlights.map((highlight) => (
+               <div
+                 key={highlight.key}
+                 className="rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[var(--shadow-soft)] backdrop-blur"
                >
-                 <Card className="h-full rounded-3xl border-white/60 bg-white/50 p-6 shadow-[var(--shadow-soft)] backdrop-blur">
-                   <CardHeader className="px-0">
-                     <div className="mb-6 inline-flex size-14 items-center justify-center rounded-2xl border border-white/60 bg-white/40 text-secondary-foreground shadow-md">
-                       <Icon className="size-6 text-[#CBA693]" />
-                     </div>
--                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-secondary-foreground">
-+                    <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-[#CBA693]">
-                       {service.title}
-                     </CardTitle>
-                   </CardHeader>
-                   <CardContent className="px-0">
-                     <p className="font-open-sans text-sm leading-6 text-muted-foreground/90">
-                       {service.description}
-                     </p>
-                   </CardContent>
-                 </Card>
-               </motion.div>
-             );
-           })}
-         </div>
+                 <div className="flex flex-col gap-3">
+                   {highlight.content.map((paragraph, paragraphIndex) => (
+                     <span key={`${highlight.key}-paragraph-${paragraphIndex}`}>{paragraph}</span>
+                   ))}
+                 </div>
+               </div>
+             ))}
+           </div>
+         </motion.div>
        </div>
++      {coreHighlight ? (
++        <motion.div
++          className="mx-auto mt-10 w-full max-w-6xl px-4 sm:px-6 lg:px-8"
++          initial={{ opacity: 0, y: 40 }}
++          whileInView={{ opacity: 1, y: 0 }}
++          viewport={{ once: true, amount: 0.2 }}
++          transition={{ duration: 0.6, ease: "easeOut" }}
++        >
++          <div className="rounded-3xl border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
++            <div className="flex flex-col gap-3 text-base leading-7 text-muted-foreground font-open-sans">
++              {coreHighlight.content.map((paragraph, paragraphIndex) => (
++                <span key={`${coreHighlight.key}-paragraph-${paragraphIndex}`}>{paragraph}</span>
++              ))}
++            </div>
++          </div>
++        </motion.div>
++      ) : null}
      </section>
    );
  }
