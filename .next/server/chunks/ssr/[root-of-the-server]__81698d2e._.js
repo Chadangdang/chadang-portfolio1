@@ -847,12 +847,12 @@ function SiteHeader() {
             duration: 0.6,
             ease: "easeOut"
         },
-        className: "mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]",
+        className: "fixed left-1/2 top-6 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 href: "#home",
-                className: "font-montserrat text-xl font-bold tracking-[0.3em] text-secondary-foreground",
-                children: "KANOMTIAN"
+                className: "font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]",
+                children: "CHADANG"
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/site-header.tsx",
                 lineNumber: 22,
@@ -867,7 +867,7 @@ function SiteHeader() {
                             children: links.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$navigation$2d$menu$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["NavigationMenuItem"], {
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                         href: link.href,
-                                        className: "text-sm font-semibold uppercase tracking-[0.3em] text-secondary-foreground/80 transition-colors hover:text-secondary-foreground",
+                                        className: "text-sm font-semibold uppercase tracking-[0.3em] text-[#756764] transition-colors hover:text-[#756764]",
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/site-header.tsx",
@@ -914,7 +914,7 @@ function SiteHeader() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                 asChild: true,
                 variant: "ghost",
-                className: "md:hidden text-secondary-foreground/80 hover:text-secondary-foreground",
+                className: "md:hidden text-[#756764] hover:text-[#756764]",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: "#contact",
                     className: "text-xs uppercase tracking-[0.35em]",
@@ -950,6 +950,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chad
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/mail.js [app-ssr] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$github$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Github$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/github.js [app-ssr] (ecmascript) <export default as Github>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-ssr] (ecmascript) <export default as Linkedin>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/node_modules/lucide-react/dist/esm/icons/instagram.js [app-ssr] (ecmascript) <export default as Instagram>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/src/components/ui/button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$site$2d$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/chadang/chadang-portfolio1/src/components/site-header.tsx [app-ssr] (ecmascript)");
 "use client";
@@ -961,7 +962,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chad
 ;
 const socials = [
     {
-        href: "chadang.phu@gmail.com",
+        href: "mailto:chadang.phu@gmail.com",
         label: "Email",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"]
     },
@@ -974,6 +975,11 @@ const socials = [
         href: "https://www.linkedin.com/in/chadang-phummarin-8a5985268/",
         label: "LinkedIn",
         icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"]
+    },
+    {
+        href: "https://www.instagram.com/chadangdang?igsh=MWYxMnVpeTd0Mm8wYQ%3D%3D&utm_source=qr",
+        label: "Instagram",
+        icon: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$instagram$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Instagram$3e$__["Instagram"]
     }
 ];
 function HeroSection() {
@@ -985,37 +991,37 @@ function HeroSection() {
                 className: "absolute inset-x-0 top-0 -z-10 h-[620px] bg-gradient-to-b from-primary/60 via-primary/40 to-transparent"
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                lineNumber: 18,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute -left-32 top-32 -z-10 h-72 w-72 rounded-full bg-white/40 blur-3xl"
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                lineNumber: 19,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute -right-12 top-24 -z-10 h-64 w-64 rounded-full bg-secondary/30 blur-3xl"
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                lineNumber: 20,
+                lineNumber: 25,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "px-4 pt-8 sm:px-6 lg:px-8",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$site$2d$header$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SiteHeader"], {}, void 0, false, {
                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                    lineNumber: 22,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                lineNumber: 21,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-16 sm:px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-8",
+                className: "mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-28 sm:px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-8",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
                         className: "flex max-w-xl flex-col gap-6",
@@ -1033,19 +1039,19 @@ function HeroSection() {
                         },
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "font-montserrat text-sm font-semibold uppercase tracking-[0.35em] text-secondary-foreground/70",
+                                className: "font-montserrat text-sm font-semibold uppercase tracking-[0.35em] text-[#756764]",
                                 children: "Hi, I am"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 31,
+                                lineNumber: 36,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "font-raleway text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary-foreground",
+                                className: "font-raleway text-4xl sm:text-5xl lg:text-6xl font-bold text-[#756764]",
                                 children: "Chadang Phummarin"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 34,
+                                lineNumber: 39,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1053,15 +1059,29 @@ function HeroSection() {
                                 children: "kanomtian"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 37,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "font-open-sans text-base leading-7 text-muted-foreground/90",
-                                children: "Welcome to my little corner of the internet. I craft expressive digital experiences that balance aesthetic, performance, and accessibility—ready to evolve into mobile, desktop, or immersive products."
-                            }, void 0, false, {
+                                children: [
+                                    "Welcome to my little corner of the internet.",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
+                                        lineNumber: 47,
+                                        columnNumber: 13
+                                    }, this),
+                                    "I build experiences where design meets tech and vision meets action",
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                        fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
+                                        lineNumber: 49,
+                                        columnNumber: 13
+                                    }, this),
+                                    "turning ideas into real impact."
+                                ]
+                            }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 40,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1075,35 +1095,35 @@ function HeroSection() {
                                             children: "Explore work"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                            lineNumber: 46,
+                                            lineNumber: 54,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                        lineNumber: 45,
+                                        lineNumber: 53,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$src$2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
                                         asChild: true,
                                         variant: "outline",
-                                        className: "rounded-full border-secondary/40 bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground hover:border-secondary",
+                                        className: "rounded-full border-[#80786B] bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#80786B] hover:border-[#80786B] hover:bg-[#80786B]/10",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#about",
                                             children: "About me"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                            lineNumber: 53,
+                                            lineNumber: 61,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                        lineNumber: 48,
+                                        lineNumber: 56,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 44,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1112,7 +1132,7 @@ function HeroSection() {
                                         asChild: true,
                                         variant: "outline",
                                         size: "icon",
-                                        className: "size-12 rounded-xl border border-white/60 bg-white/40 text-secondary-foreground shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur",
+                                        className: "size-12 rounded-xl border border-[#CBA693] bg-white/40 text-[#CBA693] shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: href,
                                             "aria-label": label,
@@ -1122,28 +1142,28 @@ function HeroSection() {
                                                 className: "size-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 74,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 73,
                                             columnNumber: 17
                                         }, this)
                                     }, label, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                        lineNumber: 58,
+                                        lineNumber: 66,
                                         columnNumber: 15
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 56,
+                                lineNumber: 64,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                        lineNumber: 25,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1168,51 +1188,51 @@ function HeroSection() {
                                 className: "absolute -top-10 -left-6 h-28 w-28 rounded-3xl border border-white/50 bg-white/40 backdrop-blur"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 78,
+                                lineNumber: 86,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -bottom-8 -right-4 h-32 w-32 rounded-full bg-secondary/40 blur-2xl"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 79,
+                                lineNumber: 87,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/20 shadow-[var(--shadow-soft)] backdrop-blur",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/images/portrait-placeholder.svg",
+                                    src: "/images/portrait.jpg",
                                     alt: "Portrait of Chadang Phummarin",
                                     width: 480,
                                     height: 640,
-                                    className: "h-full w-full object-cover",
+                                    className: "h-full w-full object-cover object-center",
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 89,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                                lineNumber: 80,
+                                lineNumber: 88,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                        lineNumber: 72,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-                lineNumber: 24,
+                lineNumber: 29,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/hero.tsx",
-        lineNumber: 17,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 }

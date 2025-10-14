@@ -2,14 +2,19 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/site-header";
 
 const socials = [
-  { href: "chadang.phu@gmail.com", label: "Email", icon: Mail },
+  { href: "mailto:chadang.phu@gmail.com", label: "Email", icon: Mail },
   { href: "https://github.com/Chadangdang", label: "GitHub", icon: Github },
   { href: "https://www.linkedin.com/in/chadang-phummarin-8a5985268/", label: "LinkedIn", icon: Linkedin },
+  {
+    href: "https://www.instagram.com/chadangdang?igsh=MWYxMnVpeTd0Mm8wYQ%3D%3D&utm_source=qr",
+    label: "Instagram",
+    icon: Instagram,
+  },
 ];
 
 export function HeroSection() {
@@ -21,25 +26,28 @@ export function HeroSection() {
       <div className="px-4 pt-8 sm:px-6 lg:px-8">
         <SiteHeader />
       </div>
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-16 sm:px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-28 sm:px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-8">
         <motion.div
           className="flex max-w-xl flex-col gap-6"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.35em] text-secondary-foreground/70">
+          <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.35em] text-[#756764]">
             Hi, I am
           </span>
-          <h1 className="font-raleway text-4xl sm:text-5xl lg:text-6xl font-bold text-secondary-foreground">
+          <h1 className="font-raleway text-4xl sm:text-5xl lg:text-6xl font-bold text-[#756764]">
             Chadang Phummarin
           </h1>
           <p className="font-montserrat text-lg uppercase tracking-[0.3em] text-primary">
             kanomtian
           </p>
           <p className="font-open-sans text-base leading-7 text-muted-foreground/90">
-            Welcome to my little corner of the internet. I craft expressive digital experiences that balance aesthetic, performance,
-            and accessibility—ready to evolve into mobile, desktop, or immersive products.
+            Welcome to my little corner of the internet.
+            <br />
+            I build experiences where design meets tech and vision meets action
+            <br />
+            turning ideas into real impact.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild className="rounded-full bg-secondary px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)]">
@@ -48,7 +56,7 @@ export function HeroSection() {
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-secondary/40 bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground hover:border-secondary"
+              className="rounded-full border-[#80786B] bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#80786B] hover:border-[#80786B] hover:bg-[#80786B]/10"
             >
               <a href="#about">About me</a>
             </Button>
@@ -60,7 +68,7 @@ export function HeroSection() {
                 asChild
                 variant="outline"
                 size="icon"
-                className="size-12 rounded-xl border border-white/60 bg-white/40 text-secondary-foreground shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur"
+                className="size-12 rounded-xl border border-[#CBA693] bg-white/40 text-[#CBA693] shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur"
               >
                 <a href={href} aria-label={label} target="_blank" rel="noreferrer">
                   <Icon className="size-5" />
@@ -79,11 +87,11 @@ export function HeroSection() {
           <div className="absolute -bottom-8 -right-4 h-32 w-32 rounded-full bg-secondary/40 blur-2xl" />
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/40 bg-white/20 shadow-[var(--shadow-soft)] backdrop-blur">
             <Image
-              src="/images/portrait-placeholder.svg"
+              src="/images/portrait.jpg"
               alt="Portrait of Chadang Phummarin"
               width={480}
               height={640}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover object-center"
               priority
             />
           </div>
