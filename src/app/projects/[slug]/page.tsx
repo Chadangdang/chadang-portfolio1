@@ -15,11 +15,11 @@ type ProjectParams = {
 };
 
 type ProjectPageProps = {
-  params: ProjectParams | Promise<ProjectParams>;
+  params: Promise<ProjectParams>;
 };
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const { slug } = await Promise.resolve(params);
+  const { slug } = await params;
   const project = projects.find((entry) => entry.slug === slug);
 
   if (!project) {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = await Promise.resolve(params);
+  const { slug } = await params;
   const project = projects.find((entry) => entry.slug === slug);
 
   if (!project) {
