@@ -2,19 +2,13 @@
 
 import { motion } from "framer-motion";
 import { services } from "@/lib/content";
-import { SectionHeader } from "@/components/section-header";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function ServicesSection() {
   return (
     <section className="relative py-24 sm:py-28">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/40 to-transparent" />
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          eyebrow="Services"
-          title="How I create value"
-          subtitle="From concept to launch, I partner with teams to design, develop, and ship purposeful experiences."
-        />
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
@@ -29,7 +23,7 @@ export function ServicesSection() {
                 <Card className="h-full rounded-3xl border-white/60 bg-white/50 p-6 shadow-[var(--shadow-soft)] backdrop-blur">
                   <CardHeader className="px-0">
                     <div className="mb-6 inline-flex size-14 items-center justify-center rounded-2xl border border-white/60 bg-white/40 text-secondary-foreground shadow-md">
-                      <Icon className="size-6" />
+                      <Icon className="size-6 text-[#CBA693]" />
                     </div>
                     <CardTitle className="font-montserrat text-xl font-semibold tracking-[0.18em] uppercase text-secondary-foreground">
                       {service.title}

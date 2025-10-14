@@ -1,72 +1,74 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/components/site-header.tsx b/src/components/site-header.tsx
-index ed622151e93644cf921886da6252abbd0569f1da..6462227cebd75e3128c8188addb7db5871234385 100644
---- a/src/components/site-header.tsx
-+++ b/src/components/site-header.tsx
-@@ -1,58 +1,58 @@
- "use client";
+diff --git a/src/lib/content.ts b/src/lib/content.ts
+index 09d777f6d79ddec44259367b2fb78b7b7a08f8dd..041ff7889e9b500bd70d48fac7085ae235917987 100644
+--- a/src/lib/content.ts
++++ b/src/lib/content.ts
+@@ -9,63 +9,63 @@ export type Service = {
+ export type Highlight = {
+   title: string;
+   description: string;
+ };
  
- import Link from "next/link";
- import { motion } from "framer-motion";
- import { Button } from "@/components/ui/button";
- import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from "@/components/ui/navigation-menu";
+ export type SkillGroup = {
+   category: string;
+   skills: string[];
+ };
  
- const links = [
-   { href: "#about", label: "About" },
-   { href: "#skills", label: "Skills" },
-   { href: "#portfolio", label: "Portfolio" },
+ export type Project = {
+   title: string;
+   subtitle: string;
+   description: string;
+   image: string;
+   href: string;
+   tags: string[];
+ };
+ 
+ import { Cpu, Sparkles, Users } from "lucide-react";
+ 
+ export const services: Service[] = [
+   {
+     title: "Technology",
+     description:
+-      "Full-stack product builds with modern frameworks, clean architecture, and performance-first thinking.",
++      "I can turn ideas into functional and responsive websites or apps using modern tools and frameworks. From front-end visuals to back-end logic, I make sure everything works seamlessly together.",
+     icon: Cpu,
+   },
+   {
+     title: "Creativity",
+     description:
+-      "Design systems, storytelling, and concept development that turn abstract ideas into delightful interfaces.",
++      "I can bring ideas to life in different forms through design, storytelling, or fresh concepts that make a project stand out. I enjoy finding unique angles and transforming imagination into something real and engaging.",
+     icon: Sparkles,
+   },
+   {
+     title: "Collaboration",
+     description:
+-      "Transparent communication, async-friendly workflows, and empathy that keep cross-functional teams aligned.",
++      "I can work closely with others to share ideas, adapt to feedback, and keep communication open. I value teamwork and make sure every project moves smoothly toward a shared goal.",
+     icon: Users,
+   },
  ];
  
- export function SiteHeader() {
-   return (
-     <motion.header
-       initial={{ opacity: 0, y: -16 }}
-       animate={{ opacity: 1, y: 0 }}
-       transition={{ duration: 0.6, ease: "easeOut" }}
--      className="mx-auto flex w-full max-w-6xl items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]"
-+      className="fixed left-1/2 top-6 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]"
-     >
--      <Link href="#home" className="font-montserrat text-xl font-bold tracking-[0.3em] text-secondary-foreground">
--        KANOMTIAN
-+      <Link href="#home" className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]">
-+        CHADANG
-       </Link>
-       <div className="hidden items-center gap-8 md:flex">
-         <NavigationMenu>
-           <NavigationMenuList className="gap-6">
-             {links.map((link) => (
-               <NavigationMenuItem key={link.href}>
-                 <a
-                   href={link.href}
--                  className="text-sm font-semibold uppercase tracking-[0.3em] text-secondary-foreground/80 transition-colors hover:text-secondary-foreground"
-+                  className="text-sm font-semibold uppercase tracking-[0.3em] text-[#756764] transition-colors hover:text-[#756764]"
-                 >
-                   {link.label}
-                 </a>
-               </NavigationMenuItem>
-             ))}
-           </NavigationMenuList>
-         </NavigationMenu>
-         <Button
-           asChild
-           className="rounded-full border border-secondary-foreground/30 bg-secondary/90 px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-[0_10px_40px_rgba(117,103,100,0.25)] hover:bg-secondary"
-         >
-           <Link href="#contact">Contact me</Link>
-         </Button>
-       </div>
-       <Button
-         asChild
-         variant="ghost"
--        className="md:hidden text-secondary-foreground/80 hover:text-secondary-foreground"
-+        className="md:hidden text-[#756764] hover:text-[#756764]"
-       >
-         <Link href="#contact" className="text-xs uppercase tracking-[0.35em]">
-           Contact
-         </Link>
-       </Button>
-     </motion.header>
-   );
- }
-\ No newline at end of file 
+ export const softSkills: Highlight[] = [
+   {
+     title: "Collaboration",
+     description:
+       "Thrives in multi-disciplinary squads with rituals that keep feedback loops active and respectful.",
+   },
+   {
+     title: "Leadership",
+     description:
+       "Guides sprints, scopes MVPs, and supports teammates with actionable mentoring and documentation.",
+   },
+   {
+     title: "Communication",
+     description:
+       "Bridges product, design, and engineering with concise updates and demo-driven checkpoints.",
+   },
+   {
+     title: "Responsibility",
+     description:
+       "Owns delivery from discovery to launch, balancing business objectives with user experience.",
+   }, 
 EOF
 )

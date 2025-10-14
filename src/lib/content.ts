@@ -31,19 +31,19 @@ export const services: Service[] = [
   {
     title: "Technology",
     description:
-      "Full-stack product builds with modern frameworks, clean architecture, and performance-first thinking.",
+      "I can turn ideas into functional and responsive websites or apps using modern tools and frameworks. From front-end visuals to back-end logic, I make sure everything works seamlessly together.",
     icon: Cpu,
   },
   {
     title: "Creativity",
     description:
-      "Design systems, storytelling, and concept development that turn abstract ideas into delightful interfaces.",
+      "I can bring ideas to life in different forms through design, storytelling, or fresh concepts that make a project stand out. I enjoy finding unique angles and transforming imagination into something real and engaging.",
     icon: Sparkles,
   },
   {
     title: "Collaboration",
     description:
-      "Transparent communication, async-friendly workflows, and empathy that keep cross-functional teams aligned.",
+      "I can work closely with others to share ideas, adapt to feedback, and keep communication open. I value teamwork and make sure every project moves smoothly toward a shared goal.",
     icon: Users,
   },
 ];
