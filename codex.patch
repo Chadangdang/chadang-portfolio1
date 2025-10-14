@@ -1,166 +1,137 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/lib/content.ts b/src/lib/content.ts
-index 041ff7889e9b500bd70d48fac7085ae235917987..7740dbee31404782ce3b0de4f5771925e0a563a8 100644
---- a/src/lib/content.ts
-+++ b/src/lib/content.ts
-@@ -30,121 +30,137 @@ import { Cpu, Sparkles, Users } from "lucide-react";
- export const services: Service[] = [
-   {
-     title: "Technology",
-     description:
-       "I can turn ideas into functional and responsive websites or apps using modern tools and frameworks. From front-end visuals to back-end logic, I make sure everything works seamlessly together.",
-     icon: Cpu,
-   },
-   {
-     title: "Creativity",
-     description:
-       "I can bring ideas to life in different forms through design, storytelling, or fresh concepts that make a project stand out. I enjoy finding unique angles and transforming imagination into something real and engaging.",
-     icon: Sparkles,
-   },
-   {
-     title: "Collaboration",
-     description:
-       "I can work closely with others to share ideas, adapt to feedback, and keep communication open. I value teamwork and make sure every project moves smoothly toward a shared goal.",
-     icon: Users,
-   },
- ];
+diff --git a/src/components/sections/skills.tsx b/src/components/sections/skills.tsx
+index 978327446651fe8a951f2439adc10fd7e9ddc939..e19449c9cb73bfb2431f840cb3fb80b3f4e0b32f 100644
+--- a/src/components/sections/skills.tsx
++++ b/src/components/sections/skills.tsx
+@@ -1,122 +1,124 @@
+ "use client";
  
- export const softSkills: Highlight[] = [
-   {
-     title: "Collaboration",
-     description:
--      "Thrives in multi-disciplinary squads with rituals that keep feedback loops active and respectful.",
-+      "Works best in fast-moving, cross-functional teams, always open to feedback, brainstorming, and building momentum together.",
-   },
-   {
-     title: "Leadership",
-     description:
--      "Guides sprints, scopes MVPs, and supports teammates with actionable mentoring and documentation.",
-+      "Drives projects forward with clear direction and energy, keeps goals realistic, teammates motivated, and results delivered.",
-   },
-   {
-     title: "Communication",
-     description:
--      "Bridges product, design, and engineering with concise updates and demo-driven checkpoints.",
-+      "Keeps everyone aligned with transparent updates, quick syncs, and demo-driven progress that speaks for itself.",
-   },
-   {
-     title: "Responsibility",
-     description:
--      "Owns delivery from discovery to launch, balancing business objectives with user experience.",
-+      "Takes ownership from kickoff to launch, balancing speed, quality, and impact to get things shipped right.",
-   },
-   {
-     title: "Adaptability",
-     description:
--      "Comfortable iterating with evolving requirements and shipping value in fast-paced environments.",
-+      "Thrives in change, adjusts fast, learns faster, and turns shifting requirements into creative opportunities.",
-   },
-   {
--    title: "Problem Solving",
-+    title: "Problem-Solving",
-     description:
--      "Translates complex constraints into pragmatic technical plans with measurable success criteria.",
-+      "Turns complexity into clarity, breaking big challenges into smart, executable steps that move projects forward.",
-   },
- ];
+ import { motion } from "framer-motion";
+ import { SectionHeader } from "@/components/section-header";
+ import { Badge } from "@/components/ui/badge";
+ import {
+   languages,
+   programmingSkills,
+   softSkills,
+   tooling,
+ } from "@/lib/content";
  
- export const languages: Highlight[] = [
-   {
-     title: "Thai",
--    description: "Native speaker with cultural fluency and localisation experience.",
-+    description:
-+      "Native speaker with strong cultural fluency and experience adapting content for local audiences.",
-   },
-   {
-     title: "English",
--    description: "Professional working proficiency across documentation and stakeholder communication.",
-+    description:
-+      "Professional working proficiency (TOEIC 750), fluent in collaboration, documentation, and stakeholder communication.",
-   },
-   {
--    title: "Spanish",
--    description: "Conversational B1/B2 level focused on collaboration and travel contexts.",
-+    title: "Mandarin",
-+    description:
-+      "Beginner level, currently studying and building everyday vocabulary for cross-cultural connection.",
-   },
- ];
+ export function SkillsSection() {
+   return (
+     <section id="skills" className="relative py-24 sm:py-28">
+       <div className="absolute inset-x-0 top-8 -z-10 h-[680px] bg-secondary/10 blur-3xl" />
+       <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
+         <SectionHeader
+           eyebrow="Skills"
+           title="craft, connect and create"
+           subtitle="combine technical craft with people skills to bring ideas to life"
++          eyebrowClassName="text-[#756764]"
+           titleClassName="text-[#756764]"
++          subtitleClassName="mb-6"
+         />
+         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+           <motion.div
+             className="rounded-[2.5rem] border border-white/60 bg-white/60 p-10 shadow-[var(--shadow-soft)] backdrop-blur"
+             initial={{ opacity: 0, y: 24 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, amount: 0.3 }}
+             transition={{ duration: 0.6, ease: "easeOut" }}
+           >
+             <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
+               Technical Stack
+             </h3>
+             <div className="mt-8 grid gap-8">
+               {programmingSkills.map((group) => (
+                 <div key={group.category} className="space-y-4">
+                   <p className="font-open-sans text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground/80">
+                     {group.category}
+                   </p>
+                   <div className="flex flex-wrap gap-3">
+                     {group.skills.map((skill) => (
+                       <Badge
+                         key={skill}
+                         variant="outline"
+-                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#756764]"
++                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#80786B]"
+                       >
+                         {skill}
+                       </Badge>
+                     ))}
+                   </div>
+                 </div>
+               ))}
+               <div className="grid gap-6">
+                 {tooling.map((group) => (
+                   <div key={group.category} className="space-y-3">
+                     <p className="font-open-sans text-sm font-semibold uppercase tracking-[0.28em] text-muted-foreground/80">
+                       {group.category}
+                     </p>
+                     <div className="flex flex-wrap gap-3">
+                       {group.skills.map((skill) => (
+                         <Badge
+                           key={`${group.category}-${skill}`}
+                           variant="secondary"
+-                          className="rounded-full bg-secondary/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-secondary-foreground"
++                          className="rounded-full bg-secondary/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#80786B]"
+                         >
+                           {skill}
+                         </Badge>
+                       ))}
+                     </div>
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </motion.div>
+           <motion.div
+             className="flex flex-col gap-10"
+             initial={{ opacity: 0, y: 24 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             viewport={{ once: true, amount: 0.3 }}
+             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+           >
+             <div className="rounded-[2.25rem] border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
+               <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
+                 Soft Skills
+               </h3>
+               <div className="mt-6 grid gap-4 text-sm leading-6 text-muted-foreground/90 font-open-sans">
+                 {softSkills.map((skill) => (
+                   <p key={skill.title} className="rounded-2xl border border-white/60 bg-white/70 p-4">
+                     <span className="block font-semibold uppercase tracking-[0.32em] text-[#80786B]">
+                       {skill.title}
+                     </span>
+                     <span className="mt-1 block text-xs tracking-wide text-muted-foreground/80">
+                       {skill.description}
+                     </span>
+                   </p>
+                 ))}
+               </div>
+             </div>
+             <div className="rounded-[2.25rem] border border-white/60 bg-white/60 p-8 shadow-[var(--shadow-soft)] backdrop-blur">
+               <h3 className="font-montserrat text-lg font-semibold uppercase tracking-[0.25em] text-[#80786B]">
+                 Languages
+               </h3>
+               <div className="mt-6 space-y-4 font-open-sans text-sm text-muted-foreground/90">
+                 {languages.map((language) => (
+                   <div key={language.title} className="flex flex-col gap-1 rounded-2xl border border-white/60 bg-white/70 p-4">
+-                    <span className="font-semibold uppercase tracking-[0.32em] text-secondary-foreground">
++                    <span className="font-semibold uppercase tracking-[0.32em] text-[#80786B]">
+                       {language.title}
+                     </span>
+                     <span className="text-xs tracking-wide text-muted-foreground/80">
+                       {language.description}
+                     </span>
+                   </div>
+                 ))}
+               </div>
+             </div>
+           </motion.div>
+         </div>
+       </div>
+     </section>
+   );
+ }
+\ No newline at end of file
  
- export const programmingSkills: SkillGroup[] = [
-   {
-     category: "Programming Languages",
--    skills: ["TypeScript", "JavaScript", "Python", "PHP"],
-+    skills: [
-+      "Python",
-+      "JavaScript",
-+      "TypeScript",
-+      "PHP",
-+      "HTML",
-+      "CSS",
-+      "JSON",
-+      "SQL",
-+    ],
-   },
-   {
-     category: "Frameworks & Libraries",
--    skills: ["Next.js", "React", "Node.js", "FastAPI", "Expo"],
--  },
--  {
--    category: "Design & Collaboration",
--    skills: ["Figma", "Framer Motion", "shadcn/ui"],
-+    skills: [
-+      "React",
-+      "React Native",
-+      "Node.js",
-+      "Next.js",
-+      "FastAPI",
-+      "Phaser",
-+      "Pygame",
-+    ],
-   },
- ];
- 
- export const tooling: SkillGroup[] = [
-   {
-     category: "Platforms & Databases",
--    skills: ["MySQL", "MongoDB", "Firebase"],
-+    skills: ["MySQL", "Firebase", "RESTful APIs"],
-   },
-   {
-     category: "Dev Tooling",
--    skills: ["Git", "VS Code", "Vercel"],
-+    skills: ["Git", "GitHub", "VS Code", "Vercel"],
-   },
-   {
--    category: "PWA & Automation",
--    skills: ["Workbox", "next-sitemap", "next-seo"],
-+    category: "Design & Collaboration",
-+    skills: ["Figma", "shadcn/ui", "Microsoft Office Suite"],
-   },
- ];
- 
- export const projects: Project[] = [
-   {
-     title: "eatsome.",
-     subtitle: "Restaurant discovery with the Yelp API",
-     description:
-       "Responsive React experience with offline caching, interactive maps, and custom filtering.",
-     image: "/projects/project-1.svg",
-     href: "#",
-     tags: ["React", "TypeScript", "Yelp API"],
-   },
-   {
-     title: "Driveflow",
-     subtitle: "Automotive event microsite",
-     description:
-       "Immersive landing page with cinematic imagery, fluid motion, and event booking flows.",
-     image: "/projects/project-2.svg",
-     href: "#",
-     tags: ["Next.js", "Framer Motion", "Tailwind"],
-   },
-   {
-     title: "Aura UI Kit",
-     subtitle: "Component system for multi-brand SaaS", 
 EOF
 )

@@ -19,7 +19,9 @@ export function SkillsSection() {
           eyebrow="Skills"
           title="craft, connect and create"
           subtitle="combine technical craft with people skills to bring ideas to life"
+          eyebrowClassName="text-[#756764]"
           titleClassName="text-[#756764]"
+          subtitleClassName="mb-6"
         />
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <motion.div
@@ -43,7 +45,7 @@ export function SkillsSection() {
                       <Badge
                         key={skill}
                         variant="outline"
-                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#756764]"
+                        className="rounded-full border-secondary/40 bg-white/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#80786B]"
                       >
                         {skill}
                       </Badge>
@@ -62,7 +64,7 @@ export function SkillsSection() {
                         <Badge
                           key={`${group.category}-${skill}`}
                           variant="secondary"
-                          className="rounded-full bg-secondary/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-secondary-foreground"
+                          className="rounded-full bg-secondary/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-[#F2EADF]"
                         >
                           {skill}
                         </Badge>
@@ -104,7 +106,7 @@ export function SkillsSection() {
               <div className="mt-6 space-y-4 font-open-sans text-sm text-muted-foreground/90">
                 {languages.map((language) => (
                   <div key={language.title} className="flex flex-col gap-1 rounded-2xl border border-white/60 bg-white/70 p-4">
-                    <span className="font-semibold uppercase tracking-[0.32em] text-secondary-foreground">
+                    <span className="font-semibold uppercase tracking-[0.32em] text-[#80786B]">
                       {language.title}
                     </span>
                     <span className="text-xs tracking-wide text-muted-foreground/80">
