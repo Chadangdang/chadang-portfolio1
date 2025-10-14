@@ -80,9 +80,6 @@ export function ContactSection() {
               Submit
             </Button>
           </div>
-          <p className="text-center text-xs uppercase tracking-[0.3em] text-muted-foreground/80">
-            Powered by Next.js • Ready for mobile, desktop & PWA experiences
-          </p>
         </motion.form>
       </div>
     </section>

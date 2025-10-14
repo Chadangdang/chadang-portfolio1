@@ -844,14 +844,6 @@ function ContactSection() {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
                                 lineNumber: 75,
                                 columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-center text-xs uppercase tracking-[0.3em] text-muted-foreground/80",
-                                children: "Powered by Next.js • Ready for mobile, desktop & PWA experiences"
-                            }, void 0, false, {
-                                fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/contact.tsx",
-                                lineNumber: 83,
-                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
@@ -2296,8 +2288,7 @@ function SkillsSection() {
                         title: "craft, connect and create",
                         subtitle: "combine technical craft with people skills to bring ideas to life",
                         eyebrowClassName: "text-[#756764]",
-                        titleClassName: "text-[#756764]",
-                        subtitleClassName: "mb-6"
+                        titleClassName: "text-[#756764]"
                     }, void 0, false, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
                         lineNumber: 18,
@@ -2330,7 +2321,7 @@ function SkillsSection() {
                                         children: "Technical Stack"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                        lineNumber: 34,
+                                        lineNumber: 33,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2344,7 +2335,7 @@ function SkillsSection() {
                                                             children: group.category
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                            lineNumber: 40,
+                                                            lineNumber: 39,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2355,18 +2346,18 @@ function SkillsSection() {
                                                                     children: skill
                                                                 }, skill, false, {
                                                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                    lineNumber: 45,
+                                                                    lineNumber: 44,
                                                                     columnNumber: 23
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                            lineNumber: 43,
+                                                            lineNumber: 42,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, group.category, true, {
                                                     fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                    lineNumber: 39,
+                                                    lineNumber: 38,
                                                     columnNumber: 17
                                                 }, this)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2379,7 +2370,7 @@ function SkillsSection() {
                                                                 children: group.category
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 59,
+                                                                lineNumber: 58,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2390,35 +2381,35 @@ function SkillsSection() {
                                                                         children: skill
                                                                     }, `${group.category}-${skill}`, false, {
                                                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                        lineNumber: 64,
+                                                                        lineNumber: 63,
                                                                         columnNumber: 25
                                                                     }, this))
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 62,
+                                                                lineNumber: 61,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, group.category, true, {
                                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                        lineNumber: 58,
+                                                        lineNumber: 57,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                lineNumber: 56,
+                                                lineNumber: 55,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                        lineNumber: 37,
+                                        lineNumber: 36,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                lineNumber: 27,
+                                lineNumber: 26,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -2449,7 +2440,7 @@ function SkillsSection() {
                                                 children: "Soft Skills"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                lineNumber: 86,
+                                                lineNumber: 85,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2462,7 +2453,7 @@ function SkillsSection() {
                                                                 children: skill.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 92,
+                                                                lineNumber: 91,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2470,24 +2461,24 @@ function SkillsSection() {
                                                                 children: skill.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 95,
+                                                                lineNumber: 94,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, skill.title, true, {
                                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                        lineNumber: 91,
+                                                        lineNumber: 90,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                lineNumber: 89,
+                                                lineNumber: 88,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 84,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2498,7 +2489,7 @@ function SkillsSection() {
                                                 children: "Languages"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 102,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2511,7 +2502,7 @@ function SkillsSection() {
                                                                 children: language.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 109,
+                                                                lineNumber: 108,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$chadang$2f$chadang$2d$portfolio1$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2519,36 +2510,36 @@ function SkillsSection() {
                                                                 children: language.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                                lineNumber: 112,
+                                                                lineNumber: 111,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, language.title, true, {
                                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                        lineNumber: 108,
+                                                        lineNumber: 107,
                                                         columnNumber: 19
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                                lineNumber: 106,
+                                                lineNumber: 105,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                        lineNumber: 102,
+                                        lineNumber: 101,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                                lineNumber: 78,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/chadang/chadang-portfolio1/src/components/sections/skills.tsx",
-                        lineNumber: 26,
+                        lineNumber: 25,
                         columnNumber: 9
                     }, this)
                 ]

@@ -21,7 +21,6 @@ export function SkillsSection() {
           subtitle="combine technical craft with people skills to bring ideas to life"
           eyebrowClassName="text-[#756764]"
           titleClassName="text-[#756764]"
-          subtitleClassName="mb-6"
         />
         <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr]">
           <motion.div
