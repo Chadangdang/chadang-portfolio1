@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { use } from "react";
 
 import { ProjectDetail } from "@/components/projects/project-detail";
 import { FooterSection } from "@/components/sections/footer";
 import { SiteHeader } from "@/components/site-header";
 import { projects } from "@/lib/content-projects";
 
-type ProjectPageProps = {
-  params: Promise<{
-    slug: string;
-  }>;
-};
-
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
+type ProjectPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const project = projects.find((entry) => entry.slug === slug);
+  const project = projects.find((entry) => entry.slug === params.slug);
 
   if (!project) {
     return {
@@ -53,8 +51,7 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
 }
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const { slug } = use(params);
-  const project = projects.find((entry) => entry.slug === slug);
+  const project = projects.find((entry) => entry.slug === params.slug);
 
   if (!project) {
     notFound();

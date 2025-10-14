@@ -17,7 +17,9 @@ type SiteHeaderProps = {
 };
 
 export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderProps) {
-  const resolveHref = (path: string) => `${linkPrefix}${path}`;
+  const resolveHref = (path: string) =>
+    path.startsWith("#") ? `${linkPrefix}${path}` : path;
+  const resolvedHomeHref = resolveHref(homeHref);
 
   return (
     <motion.header
@@ -26,8 +28,10 @@ export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderPr
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="fixed left-1/2 top-6 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]"
     >
-      <Link href="#home" 
-      className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]">
+      <Link
+        href={resolvedHomeHref}
+        className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]"
+      >
         CHADANG
       </Link>
       <div className="hidden items-center gap-8 md:flex">
@@ -49,7 +53,7 @@ export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderPr
           asChild
           className="rounded-full border border-secondary-foreground/30 bg-secondary/90 px-6 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-white shadow-[0_10px_40px_rgba(117,103,100,0.25)] hover:bg-secondary"
         >
-          <Link href="#contact">Contact me</Link>
+          <Link href={resolveHref("#contact")}>Contact me</Link>
         </Button>
       </div>
       <Button
@@ -57,7 +61,7 @@ export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderPr
         variant="ghost"
         className="md:hidden text-[#756764] hover:text-[#756764]"
       >
-        <Link href="#contact" className="text-xs uppercase tracking-[0.35em]">
+        <Link href={resolveHref("#contact")} className="text-xs uppercase tracking-[0.35em]">
           Contact
         </Link>
       </Button>
