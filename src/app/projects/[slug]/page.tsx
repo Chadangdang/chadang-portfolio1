@@ -10,10 +10,12 @@ export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
 }
 
+type ProjectParams = {
+  slug: string;
+};
+
 type ProjectPageProps = {
-  params: {
-    slug: string;
-  };
+  params: ProjectParams | Promise<ProjectParams>;
 };
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
