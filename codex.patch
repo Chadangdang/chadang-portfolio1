@@ -1,54 +1,81 @@
  (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/src/app/projects/[slug]/page.tsx b/src/app/projects/[slug]/page.tsx
-index a3063a8ae9e6c73ec31d7f5263b1db72aa9aa423..90a731848d0d63e28796bb083ad2990c88a885ca 100644
---- a/src/app/projects/[slug]/page.tsx
-+++ b/src/app/projects/[slug]/page.tsx
-@@ -1,41 +1,43 @@
- import type { Metadata } from "next";
- import { notFound } from "next/navigation";
+diff --git a/src/components/projects/project-detail.tsx b/src/components/projects/project-detail.tsx
+index 04b531babdf9712e0bc84759a1a5e601285ab148..4df888849582b7c0eff96f99c702e2e25916ddb9 100644
+--- a/src/components/projects/project-detail.tsx
++++ b/src/components/projects/project-detail.tsx
+@@ -1,27 +1,25 @@
+-import Link from "next/link";
+-
+ import { SectionHeader } from "@/components/section-header";
+ import { Badge } from "@/components/ui/badge";
+ import type { Project } from "@/lib/content-projects";
  
- import { ProjectDetail } from "@/components/projects/project-detail";
- import { FooterSection } from "@/components/sections/footer";
- import { SiteHeader } from "@/components/site-header";
- import { projects } from "@/lib/content-projects";
+ import { ProjectGallery } from "./project-gallery";
  
- export function generateStaticParams() {
-   return projects.map((project) => ({ slug: project.slug }));
- }
- 
-+type ProjectParams = {
-+  slug: string;
-+};
-+
- type ProjectPageProps = {
--  params: {
--    slug: string;
--  };
-+  params: ProjectParams | Promise<ProjectParams>;
+ type ProjectDetailProps = {
+   project: Project;
  };
  
- export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-   const { slug } = await Promise.resolve(params);
-   const project = projects.find((entry) => entry.slug === slug);
- 
-   if (!project) {
-     return {
-       title: "Project not found",
-     };
-   }
- 
-   return {
-     title: project.title,
-     description: project.summary,
-     openGraph: {
-       title: project.title,
-       description: project.summary,
-       images: project.gallery.length
-         ? [
-             {
-               url: project.gallery[0].src,
-               width: 64,
-               height: 48,
-               alt: project.gallery[0].alt, 
+ export function ProjectDetail({ project }: ProjectDetailProps) {
+   return (
+     <div className="flex flex-col gap-12">
+       <SectionHeader
+         title={project.title}
+         subtitle={project.subtitle}
+         align="center"
+         className="gap-5"
+         titleClassName="font-montserrat text-3xl sm:text-4xl font-bold tracking-[0.22em] text-[#756764]"
+         subtitleClassName="font-open-sans text-base text-[#80786B]"
+       />
+       <ProjectGallery images={project.gallery} className="mx-auto w-full max-w-4xl px-4 sm:px-0" />
+       <div className="flex flex-col gap-8 rounded-[32px] bg-[#F2EADF] p-6 shadow-[0_20px_45px_rgba(117,103,100,0.1)] sm:p-10">
+         <div className="space-y-4 font-open-sans text-sm leading-6 text-[#756764] sm:text-base sm:leading-7">
+           {project.description.map((paragraph, index) => (
+@@ -29,42 +27,42 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
+           ))}
+         </div>
+         <div className="flex flex-col gap-4">
+           <h3 className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-[#756764] sm:text-sm sm:tracking-[0.35em]">
+             Skills &amp; Tools
+           </h3>
+           <div className="flex flex-wrap gap-2">
+             {project.skills.map((skill) => (
+               <Badge
+                 key={skill}
+                 variant="outline"
+                 className="rounded-full border border-[#756764]/40 bg-transparent px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#756764] sm:text-[11px] sm:tracking-[0.3em]"
+               >
+                 {skill}
+               </Badge>
+             ))}
+           </div>
+         </div>
+         {project.links?.length ? (
+           <div className="flex flex-col gap-4">
+             <h3 className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-[#756764] sm:text-sm sm:tracking-[0.35em]">
+               Project Links
+             </h3>
+             <div className="flex flex-col gap-3">
+               {project.links.map((link) => (
+-                <Link
++                <a
+                   key={link.href}
+                   href={link.href}
+                   className="inline-flex w-fit items-center gap-2 rounded-full bg-white/60 px-4 py-2 font-open-sans text-sm font-semibold text-[#756764] underline-offset-4 transition hover:bg-white/80 hover:underline"
+                   target="_blank"
+                   rel="noreferrer"
+                 >
+                   {link.label}
+-                </Link>
++                </a>
+               ))}
+             </div>
+           </div>
+         ) : null}
+       </div>
+     </div>
+   );
+ }
+\ No newline at end of file 
 EOF
 )

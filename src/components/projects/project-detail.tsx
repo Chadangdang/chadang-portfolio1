@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { SectionHeader } from "@/components/section-header";
 import { Badge } from "@/components/ui/badge";
 import type { Project } from "@/lib/content-projects";
@@ -51,7 +49,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
             </h3>
             <div className="flex flex-col gap-3">
               {project.links.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="inline-flex w-fit items-center gap-2 rounded-full bg-white/60 px-4 py-2 font-open-sans text-sm font-semibold text-[#756764] underline-offset-4 transition hover:bg-white/80 hover:underline"
@@ -59,7 +57,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                   rel="noreferrer"
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
