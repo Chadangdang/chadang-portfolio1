@@ -52,7 +52,7 @@ export function ProjectGallery({ images, className }: ProjectGalleryProps) {
             <img
               src={activeImage.src}
               alt={activeImage.alt}
-              className="max-h-[75vh] w-auto max-w-full rounded-3xl"
+              className="mx-auto max-h-64 w-full rounded-3xl object-contain sm:max-h-[75vh]"
               loading="lazy"
             />
           </motion.div>

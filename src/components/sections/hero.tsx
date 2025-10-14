@@ -26,59 +26,59 @@ export function HeroSection() {
       <div className="px-4 pt-8 sm:px-6 lg:px-8">
         <SiteHeader />
       </div>
-      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-28 sm:px-6 lg:flex-row lg:items-start lg:gap-20 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 pt-24 sm:px-6 sm:pt-28 lg:flex-row lg:items-start lg:gap-20 lg:px-8">
         <motion.div
-          className="flex max-w-xl flex-col gap-6"
+          className="flex max-w-xl flex-col gap-6 text-center lg:text-left"
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <span className="font-montserrat text-sm font-semibold uppercase tracking-[0.35em] text-[#756764]">
+          <span className="font-montserrat text-xs font-semibold uppercase tracking-[0.28em] text-[#756764] sm:text-sm sm:tracking-[0.35em]">
             Hi, I am
           </span>
-          <h1 className="font-raleway text-4xl sm:text-5xl lg:text-6xl font-bold text-[#756764]">
+          <h1 className="font-raleway text-3xl font-bold text-[#756764] sm:text-5xl lg:text-6xl">
             Chadang Phummarin
           </h1>
-          <p className="font-montserrat text-lg uppercase tracking-[0.3em] text-primary">
+          <p className="font-montserrat text-sm uppercase tracking-[0.24em] text-primary sm:text-lg sm:tracking-[0.3em]">
             kanomtian
           </p>
-          <p className="font-open-sans text-base leading-7 text-muted-foreground/90">
+          <p className="font-open-sans text-base leading-7 text-muted-foreground/90 sm:text-lg">
             Welcome to my little corner of the internet.
             <br />
             I build experiences where design meets tech and vision meets action
             <br />
             turning ideas into real impact.
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Button asChild className="rounded-full bg-secondary px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)]">
+          <div className="flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <Button asChild className="rounded-full bg-secondary px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)] sm:text-xs sm:tracking-[0.35em]">
               <a href="#portfolio">Explore work</a>
             </Button>
             <Button
               asChild
               variant="outline"
-              className="rounded-full border-[#80786B] bg-transparent px-6 py-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#80786B] hover:border-[#80786B] hover:bg-[#80786B]/10"
+              className="rounded-full border-[#80786B] bg-transparent px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#80786B] hover:border-[#80786B] hover:bg-[#80786B]/10 sm:text-xs sm:tracking-[0.35em]"
             >
               <a href="#about">About me</a>
             </Button>
           </div>
-          <div className="flex items-center gap-4 pt-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 lg:justify-start">
             {socials.map(({ href, label, icon: Icon }) => (
               <Button
                 key={label}
                 asChild
                 variant="outline"
                 size="icon"
-                className="size-12 rounded-xl border border-[#CBA693] bg-white/40 text-[#CBA693] shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur"
+                className="size-11 rounded-xl border border-[#CBA693] bg-white/40 text-[#CBA693] shadow-[0_8px_28px_rgba(117,103,100,0.18)] backdrop-blur sm:size-12"
               >
                 <a href={href} aria-label={label} target="_blank" rel="noreferrer">
-                  <Icon className="size-5" />
+                  <Icon className="size-4 sm:size-5" />
                 </a>
               </Button>
             ))}
           </div>
         </motion.div>
         <motion.div
-          className="relative w-full max-w-md"
+          className="relative hidden w-full max-w-md md:block"
           initial={{ opacity: 0, scale: 0.92, x: 32 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}

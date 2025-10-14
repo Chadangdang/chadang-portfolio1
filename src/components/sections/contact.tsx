@@ -59,7 +59,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative pt-24 pb-20 sm:pt-32 sm:pb-20">
+    <section id="contact" className="relative pt-20 pb-16 sm:pt-32 sm:pb-20">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,#f7f1e8,rgba(203,166,147,0.45))]" />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-16 px-4 sm:px-6 lg:px-8">
         <SectionHeader
@@ -71,7 +71,7 @@ export function ContactSection() {
           subtitleClassName="text-[#80786B]"
         />
         <motion.form
-          className="grid gap-6 rounded-[2.5rem] border border-white/60 bg-white/70 p-10 shadow-[var(--shadow-soft)] backdrop-blur"
+          className="grid gap-6 rounded-[2.5rem] border border-white/60 bg-white/70 p-6 shadow-[var(--shadow-soft)] backdrop-blur sm:p-10"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -79,7 +79,7 @@ export function ContactSection() {
           onSubmit={handleSubmit}
         >
           <div className="grid gap-2">
-            <label htmlFor="name" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]">
+            <label htmlFor="name" className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#756764] sm:text-xs sm:tracking-[0.3em]">
               Enter your name*
             </label>
             <input
@@ -88,11 +88,11 @@ export function ContactSection() {
               type="text"
               placeholder="Jane Doe"
               required
-              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-5 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40 sm:px-6"
             />
           </div>
           <div className="grid gap-2">
-            <label htmlFor="email" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]">
+            <label htmlFor="email" className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#756764] sm:text-xs sm:tracking-[0.3em]">
               Enter your email*
             </label>
             <input
@@ -101,13 +101,13 @@ export function ContactSection() {
               type="email"
               placeholder="hello@chadang.dev"
               required
-              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-5 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40 sm:px-6"
               pattern={EMAIL_PATTERN.source}
               title="Please enter a valid email address (for example, name@example.com)."
             />
           </div>
           <div className="grid gap-2">
-            <label htmlFor="phone" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]">
+            <label htmlFor="phone" className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#756764] sm:text-xs sm:tracking-[0.3em]">
               Phone number
             </label>
             <input
@@ -115,11 +115,11 @@ export function ContactSection() {
               name="phone"
               type="tel"
               placeholder="Optional"
-              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-6 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+              className="h-12 rounded-full border border-secondary/30 bg-white/80 px-5 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40 sm:px-6"
             />
           </div>
           <div className="grid gap-2">
-            <label htmlFor="message" className="text-xs font-semibold uppercase tracking-[0.3em] text-[#756764]">
+            <label htmlFor="message" className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#756764] sm:text-xs sm:tracking-[0.3em]">
               Your message*
             </label>
             <textarea
@@ -128,13 +128,13 @@ export function ContactSection() {
               rows={5}
               required
               placeholder="Project goals, fun stories, context. Share as much as you'd like!"
-              className="rounded-3xl border border-secondary/30 bg-white/80 px-6 py-4 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40"
+              className="rounded-3xl border border-secondary/30 bg-white/80 px-5 py-4 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40 sm:px-6"
             />
           </div>
           <div className="flex items-center justify-center pt-2">
             <Button
               type="submit"
-              className="rounded-full bg-secondary px-10 py-4 text-xs font-semibold uppercase tracking-[0.35em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)]"
+              className="rounded-full bg-secondary px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.28em] text-secondary-foreground shadow-[0_12px_40px_rgba(117,103,100,0.25)] sm:px-10 sm:text-xs sm:tracking-[0.35em]"
               disabled={status === "loading"}
             >
               {status === "loading" ? "Sending..." : "Submit"}

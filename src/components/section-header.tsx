@@ -30,11 +30,11 @@ export function SectionHeader({
       : "items-center text-center";
 
   return (
-    <div className={cn("flex flex-col gap-2", alignment, className)}>
+    <div className={cn("flex flex-col gap-3 sm:gap-4", alignment, className)}>
       {eyebrow ? (
         <span
           className={cn(
-            "text-xs font-semibold tracking-[0.45em] uppercase text-secondary-foreground/80",
+            "text-[11px] font-semibold uppercase tracking-[0.28em] text-secondary-foreground/80 sm:text-xs sm:tracking-[0.45em]",
             eyebrowClassName,
           )}
         >
@@ -43,7 +43,7 @@ export function SectionHeader({
       ) : null}
       <h2
         className={cn(
-          "font-montserrat text-3xl sm:text-4xl font-bold tracking-[0.22em] text-secondary-foreground",
+          "font-montserrat text-2xl font-bold tracking-[0.16em] text-secondary-foreground sm:text-4xl sm:tracking-[0.22em]",
           titleClassName,
         )}
       >
@@ -52,14 +52,14 @@ export function SectionHeader({
       {subtitle ? (
         <p
           className={cn(
-            "max-w-2xl text-base text-muted-foreground/90 font-open-sans",
+            "max-w-2xl text-sm font-open-sans text-muted-foreground/90 sm:text-base",
             subtitleClassName,
           )}
         >
           {subtitle}
         </p>
       ) : null}
-      <Separator className="h-1 w-20 bg-primary/70" />
+      <Separator className="h-1 w-16 bg-primary/70 sm:w-20" />
     </div>
   );
 }

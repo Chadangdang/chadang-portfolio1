@@ -183,10 +183,10 @@ export function AboutSection() {
   const coreHighlight = aboutHighlights[3];
 
   return (
-    <section id="about" className="relative z-10 pt-24 pb-16 sm:pt-28 sm:pb-0">
+    <section id="about" className="relative z-10 pt-20 pb-12 sm:pt-28 sm:pb-0">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 sm:px-6 lg:flex-row lg:items-stretch lg:px-8">
         <motion.div
-          className="relative w-full max-w-md shrink-0 lg:h-full mt-10 sm:mt-10"
+          className="relative mt-4 w-full max-w-md shrink-0 sm:mt-8 lg:mt-10 lg:h-full"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
@@ -194,7 +194,7 @@ export function AboutSection() {
         >
           <div
             ref={containerRef}
-            className="relative h-[360px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[420px] lg:h-full"
+            className="relative h-[320px] overflow-hidden rounded-[2.75rem] border border-white/50 bg-white/30 shadow-[var(--shadow-soft)] backdrop-blur touch-pan-y sm:h-[420px] lg:h-full"
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove}
             onPointerUp={handlePointerEnd}
@@ -243,7 +243,7 @@ export function AboutSection() {
           </div>
         </motion.div>
         <motion.div
-          className="flex flex-1 flex-col gap-6 lg:justify-center"
+          className="flex flex-1 flex-col gap-6 text-center sm:text-left lg:justify-center"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -261,7 +261,7 @@ export function AboutSection() {
             {primaryHighlights.map((highlight) => (
               <div
                 key={highlight.key}
-                className="rounded-3xl border border-white/50 bg-white/45 p-6 shadow-[var(--shadow-soft)] backdrop-blur"
+                className="rounded-3xl border border-white/50 bg-white/45 p-5 text-left shadow-[var(--shadow-soft)] backdrop-blur sm:p-6"
               >
                 <div className="flex flex-col gap-3">
                   {highlight.content.map((paragraph, paragraphIndex) => (
@@ -275,12 +275,13 @@ export function AboutSection() {
       </div>
       {coreHighlight ? (
         <motion.div
-          className="mx-auto mt-3 w-full max-w-6xl px-4 sm:mt-5 sm:px-6 lg:px-8"          initial={{ opacity: 0, y: 40 }}
+          className="mx-auto mt-6 w-full max-w-6xl px-4 sm:mt-8 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="rounded-3xl border border-white/60 bg-white/60 p-6 shadow-[var(--shadow-soft)] backdrop-blur">
+          <div className="rounded-3xl border border-white/60 bg-white/60 p-5 text-left shadow-[var(--shadow-soft)] backdrop-blur sm:p-6">
             <div className="flex flex-col gap-3 text-sm leading-6 text-muted-foreground font-open-sans sm:text-base sm:leading-7">
               {coreHighlight.content.map((paragraph, paragraphIndex) => (
                 <span key={`${coreHighlight.key}-paragraph-${paragraphIndex}`}>{paragraph}</span>

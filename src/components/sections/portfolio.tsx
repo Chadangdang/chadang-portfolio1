@@ -50,15 +50,15 @@ export function PortfolioSection() {
           subtitle="A collection of ideas turned real, Each project tells a story of growth, creativity, and a bit of grit. Every one taught me something new about building, leading, or simply pushing an idea forward."
           className="text-white [&>*]:text-white [&_span]:text-white/70"
         />
-        <div className="flex flex-col gap-10">
-          <div className="flex flex-wrap items-center gap-3">
+        <div className="flex flex-col gap-8 sm:gap-10">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {filterOptions.map((option) => (
               <button
                 key={option.key}
                 type="button"
                 onClick={() => setActiveFilter(option.key)}
                 className={cn(
-                  "rounded-full border border-white/30 bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.32em] text-white/70 transition-colors",
+                  "rounded-full border border-white/30 bg-white/5 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/70 transition-colors sm:px-5 sm:text-xs sm:tracking-[0.32em]",
                   activeFilter === option.key
                     ? "bg-white text-secondary"
                     : "hover:border-white/50 hover:text-white",
@@ -69,7 +69,7 @@ export function PortfolioSection() {
               </button>
             ))}
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.slug}
@@ -80,42 +80,42 @@ export function PortfolioSection() {
                 transition={{ duration: 0.6, delay: index * 0.08, ease: "easeOut" }}
               >
                 <Link
-                href={{ pathname: `/projects/${project.slug}` }}
-                className="relative block overflow-hidden rounded-[2.25rem] border border-white/20 bg-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.25)] transition-transform hover:-translate-y-2"
+                  href={{ pathname: `/projects/${project.slug}` }}
+                  className="relative block overflow-hidden rounded-3xl border border-white/20 bg-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.25)] transition-transform hover:-translate-y-2"
                 >
-                  <div className="relative h-60 w-full overflow-hidden">
+                  <div className="relative h-40 w-full overflow-hidden sm:h-52 md:h-60">
                     <Image
                       src={project.gallery[0].src}
                       alt={project.gallery[0].alt}
                       fill
                       sizes="(min-width: 1024px) 50vw, (min-width: 768px) 60vw, 100vw"
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
-                </div>
-                <div className="relative flex flex-col gap-4 p-8 text-white">
-                  <div className="flex items-center justify-between gap-4">
-                    <h3 className="font-montserrat text-2xl font-semibold uppercase tracking-[0.25em]">
-                      {project.title}
-                    </h3>
-                    <span className="text-xs uppercase tracking-[0.3em] text-white/70">View more →</span>
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
                   </div>
-                  <p className="font-open-sans text-sm text-white/80">{project.subtitle}</p>
-                  <p className="font-open-sans text-sm leading-6 text-white/70 line-clamp-4">
-                    {project.summary}
-                  </p>
-                  <div className="flex gap-2 overflow-x-auto pb-1">
-                    {project.skills.map((tag) => (
-                      <Badge
-                        key={tag}
-                        variant="outline"
-                        className="rounded-full border-white/40 bg-white/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/80"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
+                  <div className="relative flex flex-col gap-3 p-4 text-white sm:gap-4 sm:p-6 md:p-8">
+                    <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                      <h3 className="font-montserrat text-sm font-semibold uppercase tracking-[0.18em] sm:text-xl sm:tracking-[0.22em]">
+                        {project.title}
+                      </h3>
+                      <span className="text-[10px] uppercase tracking-[0.22em] text-white/70 sm:text-xs sm:tracking-[0.3em]">View more →</span>
+                    </div>
+                    <p className="font-open-sans text-xs text-white/80 sm:text-base">{project.subtitle}</p>
+                    <p className="font-open-sans text-xs leading-5 text-white/70 line-clamp-4 sm:text-base sm:leading-7">
+                      {project.summary}
+                    </p>
+                    <div className="flex gap-1.5 overflow-x-auto pb-1 sm:flex-wrap sm:gap-2">
+                      {project.skills.map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="outline"
+                          className="rounded-full border-white/40 bg-white/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/80 sm:px-3 sm:text-[11px] sm:tracking-[0.28em]"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
-                </div>
                 </Link>
               </motion.div>
             ))}

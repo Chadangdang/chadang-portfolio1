@@ -26,11 +26,11 @@ export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderPr
       initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed left-1/2 top-6 z-50 flex w-[calc(100%-2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-6 py-4 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)]"
+      className="fixed left-1/2 top-4 z-50 flex w-[calc(100%-1.5rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-full border border-white/40 bg-white/30 px-4 py-3 backdrop-blur-lg shadow-[0_10px_60px_rgba(117,103,100,0.18)] sm:top-6 sm:w-[calc(100%-2rem)] sm:px-6 sm:py-4"
     >
       <Link
         href={resolvedHomeHref}
-        className="font-montserrat text-xl font-bold tracking-[0.3em] text-[#756764]"
+        className="font-montserrat text-lg font-bold tracking-[0.22em] text-[#756764] sm:text-xl sm:tracking-[0.3em]"
       >
         CHADANG
       </Link>
@@ -59,9 +59,9 @@ export function SiteHeader({ linkPrefix = "", homeHref = "#home" }: SiteHeaderPr
       <Button
         asChild
         variant="ghost"
-        className="md:hidden text-[#756764] hover:text-[#756764]"
+        className="text-[11px] uppercase tracking-[0.28em] text-[#756764] hover:text-[#756764] md:hidden"
       >
-        <Link href={resolveHref("#contact")} className="text-xs uppercase tracking-[0.35em]">
+        <Link href={resolveHref("#contact")} className="text-[11px] uppercase tracking-[0.28em]">
           Contact
         </Link>
       </Button>
