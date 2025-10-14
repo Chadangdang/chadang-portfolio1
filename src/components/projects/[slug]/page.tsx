@@ -5,7 +5,7 @@ import { use } from "react";
 import { ProjectDetail } from "@/components/projects/project-detail";
 import { FooterSection } from "@/components/sections/footer";
 import { SiteHeader } from "@/components/site-header";
-import { projects } from "@/lib/content";
+import { projects } from "@/lib/content-projects";
 
 type ProjectPageProps = {
   params: Promise<{

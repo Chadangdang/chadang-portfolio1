@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
-import type { ProjectGalleryImage } from "@/lib/content";
+import type { ProjectGalleryImage } from "@/lib/content-projects";
 
 type ProjectGalleryProps = {
   images: ProjectGalleryImage[];

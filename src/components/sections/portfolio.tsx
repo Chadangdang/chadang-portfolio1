@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { useMemo, useState } from "react";
 
 import { SectionHeader } from "@/components/section-header";
-import { projects } from "@/lib/content";
+import { projects } from "@/lib/content-projects";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 

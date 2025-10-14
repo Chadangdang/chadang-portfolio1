@@ -1,6 +1,6 @@
 import { SectionHeader } from "@/components/section-header";
 import { Badge } from "@/components/ui/badge";
-import type { Project } from "@/lib/content";
+import type { Project } from "@/lib/content-projects";
 
 import { ProjectGallery } from "./project-gallery";
 
