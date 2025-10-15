@@ -94,19 +94,20 @@ export function PortfolioSection() {
                     <div className="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/50 to-transparent" />
                   </div>
                   <div className="relative flex flex-col gap-3 p-4 text-white sm:gap-4 sm:p-6 md:p-8">
-                    <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-                      <h3 className="font-montserrat text-sm font-semibold uppercase tracking-[0.18em] sm:text-xl sm:tracking-[0.22em]">
-                        {project.title}
-                      </h3>
-                      <span className="text-[10px] uppercase tracking-[0.22em] text-white/70 sm:text-xs sm:tracking-[0.3em]">View more →</span>
-                    </div>
-                    <p className="font-open-sans text-xs text-white/80 sm:text-base">{project.subtitle}</p>
-                    <div className="flex gap-1.5 overflow-x-auto pb-1 sm:flex-wrap sm:gap-2">
+                    <h3 className="font-montserrat text-sm font-semibold uppercase tracking-[0.18em] sm:text-xl sm:tracking-[0.22em]">
+                      {project.title}
+                    </h3>
+                    <p className="line-clamp-2 font-open-sans text-xs text-white/80 sm:text-base">
+                      {project.subtitle}
+                    </p>
+                    <div
+                      className="flex flex-nowrap gap-1.5 overflow-x-auto pb-1 sm:gap-2"
+                    >
                       {project.skills.map((tag) => (
                         <Badge
                           key={tag}
                           variant="outline"
-                          className="rounded-full border-white/40 bg-white/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/80 sm:px-3 sm:text-[11px] sm:tracking-[0.28em]"
+                          className="shrink-0 whitespace-nowrap rounded-full border-white/40 bg-white/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.22em] text-white/80 sm:px-3 sm:text-[11px] sm:tracking-[0.28em]"
                         >
                           {tag}
                         </Badge>
