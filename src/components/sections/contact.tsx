@@ -41,6 +41,12 @@ export function ContactSection() {
         body: JSON.stringify(payload),
       });
 
+      const ct = response.headers.get("content-type") || "";
+      if (!ct.includes("application/json")) {
+        const text = await response.text();
+        throw new Error(`Unexpected response. Status ${response.status}. ${text?.slice(0,120)}`);
+      }
+
       const result = await response.json();
 
       if (!response.ok) {
