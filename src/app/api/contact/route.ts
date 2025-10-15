@@ -54,9 +54,16 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Please provide a valid email address." }, { status: 400 });
     }
 
-    const resendApiKey = process.env.RESEND_API_KEY;
-    const fromAddress = process.env.RESEND_FROM_EMAIL;
-    const toAddress = process.env.CONTACT_TO_EMAIL;
+    const resendApiKey = (process.env.RESEND_API_KEY || "").trim();
+    const fromAddress = (process.env.RESEND_FROM_EMAIL || "").trim();
+    const toAddress = (process.env.CONTACT_TO_EMAIL || "").trim();
+
+    console.log("Resend key present?", resendApiKey ? "yes" : "no", "prefix:", resendApiKey.slice(0,3));
+    console.log("From present?", !!fromAddress, "To present?", !!toAddress);
+
+    if (!resendApiKey || !fromAddress || !toAddress) {
+      return NextResponse.json({ error: "Email service is not configured." }, { status: 500 });
+    }
 
     if (!resendApiKey || !fromAddress || !toAddress) {
       console.error("Missing Resend config: RESEND_API_KEY / RESEND_FROM_EMAIL / CONTACT_TO_EMAIL");
