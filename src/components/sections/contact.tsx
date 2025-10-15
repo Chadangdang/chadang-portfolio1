@@ -86,7 +86,7 @@ export function ContactSection() {
               id="name"
               name="name"
               type="text"
-              placeholder="Jane Doe"
+              placeholder="Chadang P"
               required
               className="h-12 rounded-full border border-secondary/30 bg-white/80 px-5 text-sm font-open-sans text-[#756764] shadow-inner shadow-white/40 outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/40 sm:px-6"
             />
